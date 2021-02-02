@@ -15,6 +15,12 @@ This repository is prepared for a dataset descriptor - A Synthetic Building Oper
 This is a synthetic building operation dataset which includes HVAC, lighting, miscellaneous electric loads (MELs) system operating conditions, occupant counts, environmental parameters, end-use and whole-building energy consumptions at 10-minute intervals. The data is created with 1395 annual simulations using the U.S. DOE detailed medium-sized reference office building, and 30 years’ historical weather data in three typical climates including Miami, San Francisco, and Chicago. Three energy efficiency levels of the building and systems are considered. Assumptions regarding occupant movements, occupants’ diverse temperature preferences, lighting, and MELs are adopted to reflect realistic building operations. A semantic building metadata schema - BRICK, is used to store the building metadata. The dataset is saved in a 1.2 TB of compressed HDF5 file. This dataset can be used in various applications, including building energy and load shape benchmarking, energy model calibration, evaluation of occupant and weather variability and their influences on building performance, algorithm development and testing for thermal and energy load prediction, model predictive control, policy development for reinforcement learning based building controls. The data is currently hosted on Google Drive and can be downloaded at [this link](https://drive.google.com/file/d/1DLy1LbxICQda_M1Ez6Qh-JG-Q_CjKM8G/view?usp=sharing)
 
 
+### ***Download the Dataset***
+The dataset is registered with the U.S. Department of Energy's [Open Energy Data Initiative (OEDI)](https://data.openei.org/) and is stored with Amazon Simple Storage Service (S3). More details about the service can be found at this [site](https://registry.opendata.aws/oedi-data-lake/). To download the dataset, first make sure the [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) is installed. Then, make sure you have enough (>1.2TB) disk space, and run the command below to download the file to the <local_directory\>.
+```
+aws s3 cp s3://oedi-data-lake/building_synthetic_dataset/A_Synthetic_Building_Operation_Dataset.h5 <local_directory> --no-sign-request
+```
+
 
 ### ***Data Extraction and Visualization:***
 
