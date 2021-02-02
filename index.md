@@ -23,7 +23,7 @@ aws s3 cp s3://oedi-data-lake/building_synthetic_dataset/A_Synthetic_Building_Op
 ```
 
 #### Option 2 - Access with HSDS 
-This option is suitable for users with limited local storage space, because it allow accessing a subset of the dataset without downloading the entire file. The HDF5 file is loaded to NREL's HSDS service which provides public access to several of DOEs high-value datasets. To access the dataset, follow the guide on [this page](https://github.com/nrel/hsds-examples). The domain for the dataset is:
+This option is suitable for users with limited local storage space, because it allow accessing a subset of the dataset without downloading the entire file. The HDF5 file is loaded to NREL's Highly Scalable Data Service (HSDS) service which provides public access to several of DOEs high-value datasets. To access the dataset, follow the guide on [this page](https://github.com/nrel/hsds-examples). The domain for the dataset is:
 ```
 /nrel/building_synthetic_dataset/A_Synthetic_Building_Operation_Dataset.h5
 ```
