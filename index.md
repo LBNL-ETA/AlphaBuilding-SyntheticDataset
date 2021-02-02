@@ -56,6 +56,9 @@ We introduced a concrete example of how the simulation data can be used to train
 [2]: https://www.sciencedirect.com/science/article/abs/pii/S0306261920305481
 
 
+### ***Acknowledgements***
+This work was supported by the Assistant Secretary for Energy Efficiency and Renewable Energy, Building Technologies Office, of the U.S. Department of Energy under Contract No. DE-AC02-05CH11231. The authors thank Harry Bergmann and Amir Roth of the Building Technologies Office for their generous support. The authors also thank Michael Rossol of NREL for loading the dataset to the Open Energy Data Initiative (OEDI) data lake.
+
 
 
 <!-- ### Markdown
