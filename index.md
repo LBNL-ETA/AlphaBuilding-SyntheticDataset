@@ -34,6 +34,8 @@ This [Jupyter notebook](https://github.com/tsbyq/AlphaBuilding-A-Synthetic-Build
 ![image info](https://raw.githubusercontent.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/gh-pages/file_structure.png)
 
 ### ***Reproduce the dataset:***
+Refer to the Methods section in the paper. 
+
 
 ### ***Example use cases:***
 The developed dataset can be used for a wide array of applications. Here, we illustrated two use cases of the large-scale high-resolution data we generated: benchmarking and data-driven building control.
