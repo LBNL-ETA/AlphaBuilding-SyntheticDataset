@@ -60,9 +60,9 @@ We introduced a concrete example of how the simulation data can be used to train
 This work was supported by the Assistant Secretary for Energy Efficiency and Renewable Energy, Building Technologies Office, of the U.S. Department of Energy under Contract No. DE-AC02-05CH11231. The authors thank Harry Bergmann and Amir Roth of the Building Technologies Office for their generous support. The authors also thank Michael Rossol of NREL for loading the dataset to the Open Energy Data Initiative (OEDI) data lake.
 
 ### ***Disclaimers***
-![image info](https://licensebuttons.net/p/zero/1.0/88x31.png) 
+![image info](https://i.creativecommons.org/l/by/4.0/88x31.png) 
 
-To the extent possible under law, [this site](https://lbnl-eta.github.io/AlphaBuilding-SyntheticDataset/) has waived all copyright and related or neighboring rights to AlphaBuilding-SyntheticDataset under the [CC0 terms](https://creativecommons.org/publicdomain/zero/1.0/). This work is published from: United States.
+To the extent possible under law, [this site](https://lbnl-eta.github.io/AlphaBuilding-SyntheticDataset/) has waived all copyright and related or neighboring rights to AlphaBuilding-SyntheticDataset under the [CC BY terms](https://creativecommons.org/publicdomain/zero/1.0/). This work is published from: United States.
 
 
 <!-- ### Markdown
