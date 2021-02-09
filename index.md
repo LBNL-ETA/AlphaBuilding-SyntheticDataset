@@ -16,16 +16,9 @@ This is a synthetic building operation dataset which includes HVAC, lighting, mi
 
 
 ### ***Access the Dataset***
-#### Option 1 - Direct Download
 The dataset is registered with the U.S. Department of Energy's [Open Energy Data Initiative (OEDI)](https://data.openei.org/) and is stored with Amazon Simple Storage Service (S3). More details about the service can be found at this [site](https://registry.opendata.aws/oedi-data-lake/). To download the dataset, first make sure the [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) is installed. Then, make sure you have enough (>1.2TB) disk space, and run the command below to download the file to the <local_directory\>.
 ```
 aws s3 cp s3://oedi-data-lake/building_synthetic_dataset/A_Synthetic_Building_Operation_Dataset.h5 <local_directory> --no-sign-request
-```
-
-#### Option 2 - Access with HSDS 
-This option is suitable for users with limited local storage space, because it allow accessing a subset of the dataset without downloading the entire file. The HDF5 file is loaded to NREL's Highly Scalable Data Service (HSDS) which provides public access to several of DOEs high-value datasets. To access the dataset, follow the guide on [this page](https://github.com/nrel/hsds-examples). The domain for the dataset is:
-```
-/nrel/building_synthetic_dataset/A_Synthetic_Building_Operation_Dataset.h5
 ```
 
 ### ***Data Extraction and Visualization:***
@@ -34,8 +27,8 @@ This [Jupyter notebook](https://github.com/tsbyq/AlphaBuilding-A-Synthetic-Build
 ![image info](https://raw.githubusercontent.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/gh-pages/file_structure.png)
 
 ### ***Reproduce the dataset:***
-Refer to the Methods section in the paper. 
-
+High-level flow diagram could be found in the Methods section in the paper. 
+For details and source code of reporducing the dataset, please refer to the [README](https://github.com/LBNL-ETA/AlphaBuilding-SyntheticDataset#reproduce-the-dataset). 
 
 ### ***Example use cases:***
 The developed dataset can be used for a wide array of applications. Here, we illustrated two use cases of the large-scale high-resolution data we generated: benchmarking and data-driven building control.
