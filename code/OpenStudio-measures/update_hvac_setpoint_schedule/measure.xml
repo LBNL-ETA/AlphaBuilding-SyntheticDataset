@@ -1,0 +1,145 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>update_hvac_setpoint_schedule</name>
+  <uid>85aca71b-8f23-403b-b7a2-20ed02de0ac2</uid>
+  <version_id>12a285b0-e93b-4c78-b117-63b9bf8fb131</version_id>
+  <version_modified>20191126T231633Z</version_modified>
+  <xml_checksum>D3920775</xml_checksum>
+  <class_name>UpdateHVACSetpointSchedule</class_name>
+  <display_name>Update HVAC Setpoint schedule</display_name>
+  <description>This measure helps create a new thermostat for each conditioned thermal zone, and generate random heating and cooling setpoints based on a Gaussin distribution.</description>
+  <modeler_description>
+    This measure helps create a new thermostat for each conditioned thermal zone, and generate random heating and cooling setpoints based on a Gaussin distribution.
+      </modeler_description>
+  <arguments>
+    <argument>
+      <name>heating_setpoint_mean</name>
+      <display_name>The mean of the heating setpoint temperature.</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>22.81</default_value>
+    </argument>
+    <argument>
+      <name>cooling_setpoint_mean</name>
+      <display_name>The mean of the cooling setpoint temperature.</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>23.72</default_value>
+    </argument>
+    <argument>
+      <name>heating_setpoint_stdev</name>
+      <display_name>The standard deviation of the heating setpoint temperature.</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>1.87</default_value>
+    </argument>
+    <argument>
+      <name>cooling_setpoint_stdev</name>
+      <display_name>The standard deviation of the cooling setpoint temperature.</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>1.19</default_value>
+    </argument>
+    <argument>
+      <name>heating_setpoint_setback</name>
+      <display_name>The heating setback temperature.</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>15.56</default_value>
+    </argument>
+    <argument>
+      <name>cooling_setpoint_setback</name>
+      <display_name>The cooling setback temperature.</display_name>
+      <type>Double</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>29.44</default_value>
+    </argument>
+  </arguments>
+  <outputs/>
+  <provenances/>
+  <tags>
+    <tag>HVAC.HVAC Controls</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>LICENSE.md</filename>
+      <filetype>md</filetype>
+      <usage_type>license</usage_type>
+      <checksum>CD7F5672</checksum>
+    </file>
+    <file>
+      <filename>README.md.erb</filename>
+      <filetype>erb</filetype>
+      <usage_type>readmeerb</usage_type>
+      <checksum>703C9964</checksum>
+    </file>
+    <file>
+      <filename>update_hvac_setpoint_schedule_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>AB82D841</checksum>
+    </file>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53D14E69</checksum>
+    </file>
+    <file>
+      <filename>README.md</filename>
+      <filetype>md</filetype>
+      <usage_type>readme</usage_type>
+      <checksum>AFC5D507</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>2.7.1</identifier>
+        <min_compatible>2.7.1</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>EBFE0EE1</checksum>
+    </file>
+    <file>
+      <filename>.gitkeep</filename>
+      <filetype>gitkeep</filetype>
+      <usage_type>doc</usage_type>
+      <checksum>00000000</checksum>
+    </file>
+  </files>
+</measure>

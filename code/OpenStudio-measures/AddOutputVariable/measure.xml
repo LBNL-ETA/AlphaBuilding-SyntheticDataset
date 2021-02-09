@@ -1,0 +1,110 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>add_output_variable</name>
+  <uid>2a058afb-e349-49ae-a4bf-2c56a42b4352</uid>
+  <version_id>13ee73f1-5038-4587-b9fb-a0f845d9fabd</version_id>
+  <version_modified>20180131T232122Z</version_modified>
+  <xml_checksum>0CA4D54C</xml_checksum>
+  <class_name>AddOutputVariable</class_name>
+  <display_name>AddOutputVariable</display_name>
+  <description>This measure adds an output variable at the requested reporting frequency.</description>
+  <modeler_description>The measure just passes in the string and does not validate that it is a proper variable name. It is up to the user to know this or to look at the .rdd file from a previous simulation run.</modeler_description>
+  <arguments>
+    <argument>
+      <name>variable_name</name>
+      <display_name>Enter Variable Name.</display_name>
+      <type>String</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+    </argument>
+    <argument>
+      <name>reporting_frequency</name>
+      <display_name>Reporting Frequency.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>hourly</default_value>
+      <choices>
+        <choice>
+          <value>detailed</value>
+          <display_name>detailed</display_name>
+        </choice>
+        <choice>
+          <value>timestep</value>
+          <display_name>timestep</display_name>
+        </choice>
+        <choice>
+          <value>hourly</value>
+          <display_name>hourly</display_name>
+        </choice>
+        <choice>
+          <value>daily</value>
+          <display_name>daily</display_name>
+        </choice>
+        <choice>
+          <value>monthly</value>
+          <display_name>monthly</display_name>
+        </choice>
+        <choice>
+          <value>runperiod</value>
+          <display_name>runperiod</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>key_value</name>
+      <display_name>Enter Key Name.</display_name>
+      <description>Enter * for all objects or the full name of a specific object to.</description>
+      <type>String</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>*</default_value>
+    </argument>
+  </arguments>
+  <outputs/>
+  <provenances/>
+  <tags>
+    <tag>Reporting.QAQC</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.0.0</identifier>
+        <min_compatible>1.8.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>1CC31D97</checksum>
+    </file>
+    <file>
+      <filename>AddOutputVariable_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>F9B55B09</checksum>
+    </file>
+  </files>
+</measure>

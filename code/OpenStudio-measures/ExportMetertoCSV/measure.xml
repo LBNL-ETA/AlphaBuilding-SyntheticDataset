@@ -1,0 +1,86 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>export_meterto_csv</name>
+  <uid>0d08ca00-7dea-436d-843a-a48a483cbf7c</uid>
+  <version_id>04de393c-e568-4482-9243-2af401f090c5</version_id>
+  <version_modified>20200319T004823Z</version_modified>
+  <xml_checksum>58A298CD</xml_checksum>
+  <class_name>ExportMetertoCSV</class_name>
+  <display_name>ExportMetertoCSV</display_name>
+  <description>Exports an OutputMeter specified in the AddOutputMeter OpenStudio measure to a csv file.</description>
+  <modeler_description>This measure searches for the OutputMeter name in the eplusout sql file and saves it to a csv file.</modeler_description>
+  <arguments>
+    <argument>
+      <name>meter_name</name>
+      <display_name>Enter Meter Name.</display_name>
+      <type>String</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+    </argument>
+    <argument>
+      <name>reporting_frequency</name>
+      <display_name>Reporting Frequency.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>Hourly</default_value>
+      <choices>
+        <choice>
+          <value>Hourly</value>
+          <display_name>Hourly</display_name>
+        </choice>
+        <choice>
+          <value>Zone Timestep</value>
+          <display_name>Zone Timestep</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
+  <outputs/>
+  <provenances/>
+  <tags>
+    <tag>Reporting.QAQC</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ReportingMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type></usage_type>
+      <checksum>92BE3CD4</checksum>
+    </file>
+    <file>
+      <filename>ExportMetertoCSV_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>BE120E29</checksum>
+    </file>
+    <file>
+      <filename>report.html.in</filename>
+      <filetype>in</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>3501204C</checksum>
+    </file>
+  </files>
+</measure>
