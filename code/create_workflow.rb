@@ -412,7 +412,7 @@ vintages = [
 
 
 # Step 4. Select the building type to consider.
-# Please note that occupancy_simulator only works for office buildings
+# Please note that occupancy_simulator only works for office buildings.
 building_types = [
     ###############################################################
     ## building types that support stochastic occupancy simulation
@@ -441,6 +441,11 @@ building_types = [
     # 'Outpatient',
 ]
 
+# Step 5. Set the number of stochastic occupancy simulations for each building model.
+number_of_stochastic_occupancy_simulation = 5
+
+# Step 6. Set the energy efficiency level (1 - low, 2 - standard, 3 - high) to run.
+efficiency_level = 2
 
 starting = Time.now
 v_osws = create_workflows(building_types = building_types,
@@ -450,8 +455,8 @@ v_osws = create_workflows(building_types = building_types,
                           epws_path = epws_path,
                           hash_climate_epw = hash_climate_epw,
                           measures_dir = measures_dir,
-                          n_runs = 1,
-                          efficiency_level = 3)
+                          n_runs = number_of_stochastic_occupancy_simulation,
+                          efficiency_level = efficiency_level)
 
 run_osws(
     'os291', # Change this to your command name of OpenStudio 2.9.1.
