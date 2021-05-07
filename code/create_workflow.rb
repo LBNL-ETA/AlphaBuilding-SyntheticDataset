@@ -1,7 +1,27 @@
+# MIT License
+#
+# Copyright (c) [2021]
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
-# Change to the path where OS is installed
-require '<place_holder>/openstudio-2.9.1/Ruby/openstudio.rb'
-require '<place_holder>/openstudio-standards/lib/openstudio-standards.rb'
+require '<place_holder>/openstudio-2.9.1/Ruby/openstudio.rb' # Change to the path where OpenStudio is installed
+require '<place_holder>/openstudio-standards/lib/openstudio-standards.rb' # Change to the path where openstudio-standards is cloned
 require 'fileutils'
 require 'parallel'
 
@@ -20,197 +40,207 @@ end
 
 
 def create_single_model(building_type, vintage, climate_zone, osm_directory)
-    model = OpenStudio::Model::Model.new
-    @debug = false
-    epw_file = 'Not Applicable'
-    prototype_creator = Standard.build("#{vintage}_#{building_type}")
-    prototype_creator.model_create_prototype_model(climate_zone, epw_file, osm_directory, @debug, model)
+  model = OpenStudio::Model::Model.new
+  @debug = false
+  epw_file = 'Not Applicable'
+  prototype_creator = Standard.build("#{vintage}_#{building_type}")
+  prototype_creator.model_create_prototype_model(climate_zone, epw_file, osm_directory, @debug, model)
 end
 
-def create_workflows(building_types,
-                     vintages,
-                     climate_zones,
-                     root_directory,
-                     epws_path,
-                     measures_dir=nil,
-                     n_runs=5,
-                     efficiency_level=2)
+# Generate OpenStudio seed models for synthetic building operation data creation,
+# create corresponding OpenStudio workflows which later will be used for simulations
+# @param [Array] building_types: an array of building types to consider
+# @param [Array] vintages: an array of building vintages to consider
+# @param [Array] climate_zones: an array of climate zones to consider
+# @param [String] root_directory: the path to root working directory
+# @param [String] epws_path: the path to EPW files folder
+# @param [Hash] hash_climate_epw: a Hash to map climate zones and EPW files
+# @param [String] measures_dir: the path to OpenStudio measures
+# @param [Integer] n_runs: number of stochastic occupancy simulation for each OpenStudio model
+# @param [Integer] efficiency_level: the energy efficiency level (1: low, 2: Standard, 3: high)
+# @return [Array] v_osw_paths: an array of OpenStudio workflow paths
+def create_workflows(
+    building_types,
+    vintages,
+    climate_zones,
+    root_directory,
+    epws_path,
+    hash_climate_epw,
+    measures_dir = nil,
+    n_runs = 5,
+    efficiency_level = 2
+)
 
-    unless File.directory?(File.expand_path(root_directory))
-        FileUtils.mkdir_p(File.expand_path(root_directory))
+  unless File.directory?(File.expand_path(root_directory))
+    FileUtils.mkdir_p(File.expand_path(root_directory))
+  end
+
+  hash_eff_level = {
+      1 => 'Low',
+      2 => 'Standard',
+      3 => 'High',
+  }
+  out_osw_dir = File.expand_path(File.join(root_directory, "3~OSWs", "efficiency_level_#{hash_eff_level[efficiency_level]}"))
+  v_osw_paths = []
+
+  building_types.each do |building_type|
+    climate_zones.each do |climate_zone|
+      sub_epws_path = File.expand_path(File.join(epws_path, hash_climate_epw[climate_zone]))
+      vintages.each do |vintage|
+        ## 1. Generate and prepare OSM
+        model_name = building_type + '_' + vintage + '_' + climate_zone.split('-').last.to_s
+        seed_model_folder = File.join(root_directory, '1~seeds', model_name)
+        new_model_folder = File.join(root_directory, '2~processed_models', "efficiency_level_#{hash_eff_level[efficiency_level]}", model_name)
+        old_osm_path = File.expand_path(File.join(seed_model_folder, 'SR1/in.osm'))
+        old_epw_path = File.expand_path(File.join(seed_model_folder, 'SR1/in.epw'))
+        new_osm_path = File.expand_path(File.join(new_model_folder, "#{model_name}.osm"))
+        new_epw_path = File.expand_path(File.join(new_model_folder, "#{model_name}.epw"))
+        ## Create raw building model
+        create_single_model(building_type, vintage, climate_zone, seed_model_folder)
+        ## Process model
+        process_model(old_osm_path, new_osm_path, efficiency_level)
+        FileUtils.mv(old_epw_path, new_epw_path)
+        ## 2. Prepare OSW
+        v_epw_paths = Dir.glob("#{sub_epws_path}/*.epw")
+        v_osw_paths += prepare_all_osws(new_osm_path, v_epw_paths, out_osw_dir, measures_dir, n_runs)
+
+      end
     end
-
-    hash_climate_epw = {
-        'ASHRAE 169-2006-1A' => 'Miami_AMY',
-        'ASHRAE 169-2006-3C' => 'SF_AMY',
-        'ASHRAE 169-2006-5A' => 'Chicago_AMY',
-    }
-    hash_eff_level = {
-        1 => 'Low',
-        2 => 'Standard',
-        3 => 'High',
-    }
-    out_osw_dir = File.expand_path(File.join(root_directory, "3~OSWs", "efficiency_level_#{hash_eff_level[efficiency_level]}"))
-    v_osw_paths = []
-
-    building_types.each do |building_type|
-        climate_zones.each do |climate_zone|
-            sub_epws_path = File.expand_path(File.join(epws_path, hash_climate_epw[climate_zone]))
-            vintages.each do |vintage|
-                ## 1. Generate and prepare OSM
-                model_name = building_type + '_' + vintage + '_' + climate_zone.split('-').last.to_s
-                seed_model_folder = File.join(root_directory, '1~seeds', model_name)
-                new_model_folder = File.join(root_directory, '2~processed_models', "efficiency_level_#{hash_eff_level[efficiency_level]}", model_name)
-                old_osm_path = File.expand_path(File.join(seed_model_folder, 'SR1/in.osm'))
-                old_epw_path = File.expand_path(File.join(seed_model_folder, 'SR1/in.epw'))
-                new_osm_path = File.expand_path(File.join(new_model_folder, "#{model_name}.osm"))
-                new_epw_path = File.expand_path(File.join(new_model_folder, "#{model_name}.epw"))
-                ## Create raw building model
-                create_single_model(building_type, vintage, climate_zone, seed_model_folder)
-                ## Process model
-                process_model(old_osm_path, new_osm_path, efficiency_level)
-                FileUtils.mv(old_epw_path, new_epw_path)
-                ## 2. Prepare OSW
-                v_epw_paths = Dir.glob("#{sub_epws_path}/*.epw")
-                v_osw_paths += prepare_all_osws(new_osm_path, v_epw_paths, out_osw_dir, measures_dir, n_runs)
-
-            end
-        end
-    end
-    f = File.new(File.join(root_directory, "job_efficiency_level_#{hash_eff_level[efficiency_level]}.txt"), "w")
-    f.write(v_osw_paths)
-    f.close
-    return v_osw_paths
+  end
+  f = File.new(File.join(root_directory, "job_efficiency_level_#{hash_eff_level[efficiency_level]}.txt"), "w")
+  f.write(v_osw_paths)
+  f.close
+  return v_osw_paths
 end
 
-def process_model(old_osm_path, new_osm_path, efficiency_level=2)
-    osm_dir = File.dirname(new_osm_path)
-    unless File.directory?(osm_dir)
-        FileUtils.mkdir_p(osm_dir)
-    end
+def process_model(old_osm_path, new_osm_path, efficiency_level = 2)
+  osm_dir = File.dirname(new_osm_path)
+  unless File.directory?(osm_dir)
+    FileUtils.mkdir_p(osm_dir)
+  end
 
-    # Do the following:
-    # 1. Change the simulation run period to match weather data
-    model = loadOSM(old_osm_path)
-    model.getSimulationControl.setRunSimulationforSizingPeriods(false)
-    model.getSimulationControl.setRunSimulationforWeatherFileRunPeriods(true)
+  # Do the following:
+  # 1. Change the simulation run period to match weather data
+  model = loadOSM(old_osm_path)
+  model.getSimulationControl.setRunSimulationforSizingPeriods(false)
+  model.getSimulationControl.setRunSimulationforWeatherFileRunPeriods(true)
 
-    # 2. Enable CO2 simulations
-    # model.getZoneAirContaminantBalance.setCarbonDioxideConcentration(true)
+  # 2. Enable CO2 simulations
+  # model.getZoneAirContaminantBalance.setCarbonDioxideConcentration(true)
 
-    # 3. Change the VAV control logic to dual-maximum
-    vav_reheats = model.getAirTerminalSingleDuctVAVReheats
-    vav_reheats.each do |vav_reheat|
-        vav_reheat.setDamperHeatingAction('ReverseWithLimits')
-    end
+  # 3. Change the VAV control logic to dual-maximum
+  vav_reheats = model.getAirTerminalSingleDuctVAVReheats
+  vav_reheats.each do |vav_reheat|
+    vav_reheat.setDamperHeatingAction('ReverseWithLimits')
+  end
 
-    # 4. Change the efficiency level (TBD)
-    model = adjust_efficiency_level(model, efficiency_level)
+  # 4. Change the efficiency level (TBD)
+  model = adjust_efficiency_level(model, efficiency_level)
 
-    # Save processed model
-    model.save(new_osm_path, true)
+  # Save processed model
+  model.save(new_osm_path, true)
 end
 
 
-def adjust_efficiency_level(model, level=2)
-    # Efficiency levels:
-    # 1 - low
-    # 2 - standard
-    # 3 - high
+def adjust_efficiency_level(model, level = 2)
+  # Efficiency levels:
+  # 1 - low
+  # 2 - standard
+  # 3 - high
 
-    if level == 2
-        puts 'Keep the default efficiency level.'
-        return model
-    else
-        if level == 1
-            puts 'Adjusting to low efficiency level.'
-            factor = 1.25
-        elsif level == 3
-            puts 'Adjusting to high efficiency level.'
-            factor = 0.75
-        end
-    end
-
-    
-    # 1. Lighting
-    v_light_defs = model.getLightsDefinitions
-    v_light_defs.each do |light_def|
-        old_lpd = light_def.wattsperSpaceFloorArea.to_f
-        light_def.setWattsperSpaceFloorArea(old_lpd * factor)
-    end
-
-    # 2. MELs
-    v_equip_defs = model.getElectricEquipmentDefinitions
-    v_equip_defs.each do |equip_def|
-        if equip_def.designLevelCalculationMethod == 'Watts/Area'
-            equip_def.setWattsperSpaceFloorArea(equip_def.wattsperSpaceFloorArea.to_f * factor)
-        elsif equip_def.designLevelCalculationMethod == 'EquipmentLevel'
-            equip_def.setDesignLevel(equip_def.designLevel.to_f * factor)
-        end
-    end
-
-    # 3. Wall insulation
-    v_opaque_materials = model.getStandardOpaqueMaterials
-    v_opaque_materials.each do |opaque_material|
-        opaque_material.setThermalConductivity(opaque_material.thermalConductivity.to_f * factor)
-    end
-
-
-    # 4. Windows
-    v_glazing_materials = model.getGlazings
-    v_glazing_materials.each do |glazing_material|
-        glazing_material.setThickness(glazing_material.thickness.to_f / factor)
-    end
-
-    # 5. Cooling plant
-    v_cooling_coils = model.getCoilCoolingDXTwoSpeeds
-    v_cooling_coils.each do |cooling_coil|
-        cooling_coil.setRatedLowSpeedCOP(cooling_coil.ratedLowSpeedCOP.to_f / factor)
-        cooling_coil.setRatedHighSpeedCOP(cooling_coil.ratedHighSpeedCOP.to_f / factor)
-    end
-
-    # 6. Heating plant
-    v_heating_coils = model.getCoilHeatingGass
-    v_heating_coils.each do |heating_coil|
-        # Set highest efficiency to be 0.95
-        heating_coil.setGasBurnerEfficiency([0.95, heating_coil.gasBurnerEfficiency.to_f / factor].min)
-    end
-
-    v_reheating_coils = model.getCoilHeatingElectrics
-    v_reheating_coils.each do |reheating_coil|
-        reheating_coil.setEfficiency([1, reheating_coil.efficiency.to_f / factor].min) 
-    end
-
-    v_water_heaters = model.getWaterHeaterMixeds
-    v_water_heaters.each do |water_heater|
-        water_heater.setHeaterThermalEfficiency([0.95, water_heater.heaterThermalEfficiency.to_f / factor].min)
-    end
-
-    # 7. Fans
-    v_fans = model.getFanVariableVolumes
-    v_fans.each do |fan|
-        fan.setFanTotalEfficiency([0.8, fan.fanTotalEfficiency.to_f / factor].min)
-        fan.setMotorEfficiency([0.95, fan.motorEfficiency.to_f / factor].min)
-    end
-
-    # 8. Pumps
-    v_pumps = model.getPumpConstantSpeeds
-    v_pumps.each do |pump|
-        pump.setMotorEfficiency([0.6, pump.motorEfficiency.to_f / factor].min)
-    end
-
+  if level == 2
+    puts 'Keep the default efficiency level.'
     return model
+  else
+    if level == 1
+      puts 'Adjusting to low efficiency level.'
+      factor = 1.25
+    elsif level == 3
+      puts 'Adjusting to high efficiency level.'
+      factor = 0.75
+    end
+  end
+
+
+  # 1. Lighting
+  v_light_defs = model.getLightsDefinitions
+  v_light_defs.each do |light_def|
+    old_lpd = light_def.wattsperSpaceFloorArea.to_f
+    light_def.setWattsperSpaceFloorArea(old_lpd * factor)
+  end
+
+  # 2. MELs
+  v_equip_defs = model.getElectricEquipmentDefinitions
+  v_equip_defs.each do |equip_def|
+    if equip_def.designLevelCalculationMethod == 'Watts/Area'
+      equip_def.setWattsperSpaceFloorArea(equip_def.wattsperSpaceFloorArea.to_f * factor)
+    elsif equip_def.designLevelCalculationMethod == 'EquipmentLevel'
+      equip_def.setDesignLevel(equip_def.designLevel.to_f * factor)
+    end
+  end
+
+  # 3. Wall insulation
+  v_opaque_materials = model.getStandardOpaqueMaterials
+  v_opaque_materials.each do |opaque_material|
+    opaque_material.setThermalConductivity(opaque_material.thermalConductivity.to_f * factor)
+  end
+
+
+  # 4. Windows
+  v_glazing_materials = model.getGlazings
+  v_glazing_materials.each do |glazing_material|
+    glazing_material.setThickness(glazing_material.thickness.to_f / factor)
+  end
+
+  # 5. Cooling plant
+  v_cooling_coils = model.getCoilCoolingDXTwoSpeeds
+  v_cooling_coils.each do |cooling_coil|
+    cooling_coil.setRatedLowSpeedCOP(cooling_coil.ratedLowSpeedCOP.to_f / factor)
+    cooling_coil.setRatedHighSpeedCOP(cooling_coil.ratedHighSpeedCOP.to_f / factor)
+  end
+
+  # 6. Heating plant
+  v_heating_coils = model.getCoilHeatingGass
+  v_heating_coils.each do |heating_coil|
+    # Set highest efficiency to be 0.95
+    heating_coil.setGasBurnerEfficiency([0.95, heating_coil.gasBurnerEfficiency.to_f / factor].min)
+  end
+
+  v_reheating_coils = model.getCoilHeatingElectrics
+  v_reheating_coils.each do |reheating_coil|
+    reheating_coil.setEfficiency([1, reheating_coil.efficiency.to_f / factor].min)
+  end
+
+  v_water_heaters = model.getWaterHeaterMixeds
+  v_water_heaters.each do |water_heater|
+    water_heater.setHeaterThermalEfficiency([0.95, water_heater.heaterThermalEfficiency.to_f / factor].min)
+  end
+
+  # 7. Fans
+  v_fans = model.getFanVariableVolumes
+  v_fans.each do |fan|
+    fan.setFanTotalEfficiency([0.8, fan.fanTotalEfficiency.to_f / factor].min)
+    fan.setMotorEfficiency([0.95, fan.motorEfficiency.to_f / factor].min)
+  end
+
+  # 8. Pumps
+  v_pumps = model.getPumpConstantSpeeds
+  v_pumps.each do |pump|
+    pump.setMotorEfficiency([0.6, pump.motorEfficiency.to_f / factor].min)
+  end
+
+  return model
 end
 
 
 def prepare_single_osw(seed_osm_path, epw_path, measures_dir, osw_path)
-    # Prepare OSW to add dynamic occupancy, lighting, MELs schedules.
-    osw_dir = File.dirname(osw_path)
-    unless File.directory?(osw_dir)
-        FileUtils.mkdir_p(osw_dir)
-    end
-    osw_str = 
-%({
+  # Prepare OSW to add dynamic occupancy, lighting, MELs schedules.
+  osw_dir = File.dirname(osw_path)
+  unless File.directory?(osw_dir)
+    FileUtils.mkdir_p(osw_dir)
+  end
+  osw_str =
+      %({
     "weather_file": "#{epw_path}",
     "seed_file": "#{seed_osm_path}",
     "measure_paths": [
@@ -297,57 +327,120 @@ def prepare_single_osw(seed_osm_path, epw_path, measures_dir, osw_path)
     ]
 })
 
-    f = File.new(osw_path, "w")
-    f.write(osw_str)
-    f.close
+  f = File.new(osw_path, "w")
+  f.write(osw_str)
+  f.close
 end
 
 def prepare_all_osws(seed_osm_path, v_epw_paths, out_osw_dir, measures_dir, n_runs)
-    # seed_osm_path - seed OS model
-    # v_epw_paths - array of epw paths
-    # out_osw_dir - directory where osw will be grouped and saved by each year's epw
-    # measures_dir - directory where OS measures are saved
-    # n_runs - i.e. n_runs of occupancy simulator runs for each epw
-    
-    v_osw_paths = []
-    seed_osm_name = File.basename(seed_osm_path, ".osm")
-    v_epw_paths.each do |epw_path|
-        epw_name =  File.basename(epw_path, ".epw")
-        year = epw_name[-2..-1]
-        for i in 1..n_runs
-            temp_osw_path = "#{out_osw_dir}/#{seed_osm_name}/#{epw_name}/run_#{i}/#{seed_osm_name}_run_#{i}.osw"
-            prepare_single_osw(seed_osm_path, epw_path, measures_dir, temp_osw_path)
-            v_osw_paths << temp_osw_path
-        end
-    end
+  # seed_osm_path - seed OS model
+  # v_epw_paths - array of epw paths
+  # out_osw_dir - directory where osw will be grouped and saved by each year's epw
+  # measures_dir - directory where OS measures are saved
+  # n_runs - i.e. n_runs of occupancy simulator runs for each epw
 
-    v_osw_paths
+  v_osw_paths = []
+  seed_osm_name = File.basename(seed_osm_path, ".osm")
+  v_epw_paths.each do |epw_path|
+    epw_name = File.basename(epw_path, ".epw")
+    year = epw_name[-2..-1]
+    for i in 1..n_runs
+      temp_osw_path = "#{out_osw_dir}/#{seed_osm_name}/#{epw_name}/run_#{i}/#{seed_osm_name}_run_#{i}.osw"
+      prepare_single_osw(seed_osm_path, epw_path, measures_dir, temp_osw_path)
+      v_osw_paths << temp_osw_path
+    end
+  end
+
+  v_osw_paths
 end
 
 def run_osws(os_exe, v_osw_paths, number_of_threads)
-    n = v_osw_paths.length
-    Parallel.each_with_index(v_osw_paths, :in_threads => number_of_threads) do |osw_path, index|
-      puts "Running #{index+1}/#{n}"
-      command = "#{os_exe} run -w '#{osw_path}'"
-      puts command
-      system command
-    end
+  n = v_osw_paths.length
+  Parallel.each_with_index(v_osw_paths, :in_threads => number_of_threads) do |osw_path, index|
+    puts "Running #{index + 1}/#{n}"
+    command = "#{os_exe} run -w '#{osw_path}'"
+    puts command
+    system command
+  end
 end
 
 ################################################################################
-## Main
+## Main: set the run configurations for synthetic operation data generation
 ################################################################################
-climate_zones = [
-    'ASHRAE 169-2006-1A',
-    'ASHRAE 169-2006-3C',
-    'ASHRAE 169-2006-5A',
-]
 
-building_types = ['MediumOfficeDetailed']
-vintages = ['90.1-2013']
+# Step 0. Set the working directories (no need to change if you cloned the repository)
 root_directory = './Models/'
 measures_dir = './OpenStudio-measures'
 epws_path = './EPWs'
+
+# Step 1. Select the climate zone(s) for simulation.
+climate_zones = [
+    'ASHRAE 169-2006-1A',
+    # 'ASHRAE 169-2006-2A',
+    # 'ASHRAE 169-2006-2B',
+    # 'ASHRAE 169-2006-3A',
+    # 'ASHRAE 169-2006-3B',
+    'ASHRAE 169-2006-3C',
+    # 'ASHRAE 169-2006-4A',
+    # 'ASHRAE 169-2006-4B',
+    # 'ASHRAE 169-2006-4C',
+    'ASHRAE 169-2006-5A',
+    # 'ASHRAE 169-2006-5B',
+    # 'ASHRAE 169-2006-6A',
+    # 'ASHRAE 169-2006-6B',
+    # 'ASHRAE 169-2006-7A',
+    # 'ASHRAE 169-2006-8A',
+]
+
+# Step 2. Make sure you have the weather files (EPWs) and map the their folder
+# to the climate zones following the example convention
+hash_climate_epw = {
+    # 'climate zone option' => 'EPWs folder name', (example convention)
+    'ASHRAE 169-2006-1A' => 'Miami_AMY',
+    'ASHRAE 169-2006-3C' => 'SF_AMY',
+    'ASHRAE 169-2006-5A' => 'Chicago_AMY',
+}
+
+
+# Step 3. Select the vintages you want to consider
+vintages = [
+    # '90.1-2004',
+    # '90.1-2007',
+    # '90.1-2010',
+    '90.1-2013'
+]
+
+
+# Step 4. Select the building type to consider.
+# Please note that occupancy_simulator only works for office buildings
+building_types = [
+    ###############################################################
+    ## building types that support stochastic occupancy simulation
+    ###############################################################
+    # 'SmallOffice',
+    # 'MediumOffice',
+    # 'LargeOffice',
+    # 'SmallOfficeDetailed',
+    'MediumOfficeDetailed',
+    # 'LargeOfficeDetailed',
+    ###############################################################
+    ## building types that do not support stochastic occupancy simulation
+    ###############################################################
+    # 'SecondarySchool',
+    # 'PrimarySchool',
+    # 'SmallHotel',
+    # 'LargeHotel',
+    # 'Warehouse',
+    # 'RetailStandalone',
+    # 'RetailStripmall',
+    # 'QuickServiceRestaurant',
+    # 'FullServiceRestaurant',
+    # 'MidriseApartment',
+    # 'HighriseApartment',
+    # 'Hospital',
+    # 'Outpatient',
+]
+
 
 starting = Time.now
 v_osws = create_workflows(building_types = building_types,
@@ -355,11 +448,16 @@ v_osws = create_workflows(building_types = building_types,
                           climate_zones = climate_zones,
                           root_directory = root_directory,
                           epws_path = epws_path,
+                          hash_climate_epw = hash_climate_epw,
                           measures_dir = measures_dir,
                           n_runs = 1,
                           efficiency_level = 3)
 
-run_osws('os291', v_osws, 31)
+run_osws(
+    'os291', # Change this to your command name of OpenStudio 2.9.1.
+    v_osws, # The array of OpenStudio workflows generated in the previous step.
+    31 # Change this number to set number of threads for parallel simulations.
+)
 
 ending = Time.now
 elapsed = ending - starting
