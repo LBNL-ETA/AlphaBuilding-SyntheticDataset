@@ -2,8 +2,8 @@
 
 This repository is created for the AlphaBuilding-SyntheticDataset. Details about this dataset could be found on its [GitHub page](https://lbnl-eta.github.io/AlphaBuilding-SyntheticDataset/).
 
-## Reproduce the Dataset
-The source code to reproduce the dataset could be found in the code directory. Follow the steps below to reproduce the dataset:
+## Generate synthetic building operation data
+The source code to reproduce the dataset could be found in the code directory. Follow the steps below to generate synthetic building operation data:
 1. Install [OpenStudio v2.9.1](https://github.com/NREL/OpenStudio/releases/tag/v2.9.1). 
 Set up the full path of openstudio.rb in the [create_workflow.rb](https://github.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/blob/master/code/create_workflow.rb#L23) script. 
 The openstudio.rb file could be found in the installed OpenStudio folder: <paht_to_openstudio_installation>/openstudio-2.9.1/Ruby/openstudio.rb.
