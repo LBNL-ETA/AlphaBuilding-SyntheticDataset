@@ -1,17 +1,17 @@
 ## A Synthetic Building Operation Dataset
 
-***Prepared by:*** [**Han Li**](https://github.com/tsbyq)
 
-This repository is prepared for a dataset descriptor - A Synthetic Building Operation Dataset submitted to the [Scientific Data](https://www.nature.com/sdata/) journal. It contains:
+This is the official repository prepared for a dataset descriptor - A Synthetic Building Operation Dataset submitted to the [Scientific Data](https://www.nature.com/sdata/) journal. 
+> *Han Li, Zhe Wang, Tianzhen Hong. 2021. A Synthetic Building Operation Dataset. Submitted to Scientific Data*
+>
+It contains:
 1. A brief introduction to the dataset.
 2. A Jupyter notebook with Python script to extract and visualize the data.
-3. A steps to re-produce the dataset.
+3. A step-by-step guidance to generate synthetic building operation data.
 3. A discussion of example use cases of the dataset. 
 
 
-
 ### ***About the dataset:***
-
 This is a synthetic building operation dataset which includes HVAC, lighting, miscellaneous electric loads (MELs) system operating conditions, occupant counts, environmental parameters, end-use and whole-building energy consumptions at 10-minute intervals. The data is created with 1395 annual simulations using the U.S. DOE detailed medium-sized reference office building, and 30 years’ historical weather data in three typical climates including Miami, San Francisco, and Chicago. Three energy efficiency levels of the building and systems are considered. Assumptions regarding occupant movements, occupants’ diverse temperature preferences, lighting, and MELs are adopted to reflect realistic building operations. A semantic building metadata schema - BRICK, is used to store the building metadata. The dataset is saved in a 1.2 TB of compressed HDF5 file. This dataset can be used in various applications, including building energy and load shape benchmarking, energy model calibration, evaluation of occupant and weather variability and their influences on building performance, algorithm development and testing for thermal and energy load prediction, model predictive control, policy development for reinforcement learning based building controls.
 
 
@@ -26,9 +26,9 @@ aws s3 cp s3://oedi-data-lake/building_synthetic_dataset/A_Synthetic_Building_Op
 This [Jupyter notebook](https://github.com/tsbyq/AlphaBuilding-A-Synthetic-Building-Operation-Dataset/blob/gh-pages/A%20Synthetic%20Operation%20Dataset.ipynb) contains Python scripts, dependencies, functions to extract and explore the dataset. The structure of the file is shown in the figure below.
 ![image info](https://raw.githubusercontent.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/gh-pages/file_structure.png)
 
-### ***Reproduce the dataset:***
+### ***Generate new dataset:***
 High-level flow diagram could be found in the Methods section in the paper. 
-For details and source code of reporducing the dataset, please refer to the [README](https://github.com/LBNL-ETA/AlphaBuilding-SyntheticDataset#reproduce-the-dataset). 
+For details and source code of generating new dataset, please refer to the [README](https://github.com/LBNL-ETA/AlphaBuilding-SyntheticDataset#generate-synthetic-building-operation-data). 
 
 ### ***Example use cases:***
 The developed dataset can be used for a wide array of applications. Here, we illustrated two use cases of the large-scale high-resolution data we generated: benchmarking and data-driven building control.
@@ -51,6 +51,9 @@ We introduced a concrete example of how the simulation data can be used to train
 
 ### ***Acknowledgements***
 This work was supported by the Assistant Secretary for Energy Efficiency and Renewable Energy, Building Technologies Office, of the U.S. Department of Energy under Contract No. DE-AC02-05CH11231. The authors thank Harry Bergmann and Amir Roth of the Building Technologies Office for their generous support. The authors also thank Michael Rossol of NREL for loading the dataset to the Open Energy Data Initiative (OEDI) data lake.
+
+### ***Additional Information***
+Han Li led the simulations and development of the dataset as well as wrote the manuscript. Tianzhen Hong supervised the research effort, designed the simulations and architecture of the dataset, as well as edited the manuscript. Zhe Wang co-wrote the manuscript and provided support for the simulations. Correspondence and requests for materials should be addressed to [Tianzhen Hong](mailto:thong@lbl.gov) or [Han Li](mailto:hanli@lbl.gov).
 
 ### ***Disclaimers***
 ![image info](https://i.creativecommons.org/l/by/4.0/88x31.png) 
