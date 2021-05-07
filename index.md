@@ -3,7 +3,7 @@
 
 This is the official repository prepared for a dataset descriptor - A Synthetic Building Operation Dataset submitted to the [Scientific Data](https://www.nature.com/sdata/) journal. 
 > *Han Li, Zhe Wang, Tianzhen Hong. 2021. A Synthetic Building Operation Dataset. Submitted to Scientific Data*
->
+
 It contains:
 1. A brief introduction to the dataset.
 2. A Jupyter notebook with Python script to extract and visualize the data.
