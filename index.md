@@ -23,7 +23,7 @@ aws s3 cp s3://oedi-data-lake/building_synthetic_dataset/A_Synthetic_Building_Op
 
 ### ***Data Extraction and Visualization:***
 
-This [Jupyter notebook](https://github.com/tsbyq/AlphaBuilding-A-Synthetic-Building-Operation-Dataset/blob/gh-pages/A%20Synthetic%20Operation%20Dataset.ipynb) contains Python scripts, dependencies, functions to extract and explore the dataset. The structure of the file is shown in the figure below.
+This [Jupyter notebook](https://github.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/blob/master/A%20Synthetic%20Operation%20Dataset.ipynb) contains Python scripts, dependencies, functions to extract and explore the dataset. The structure of the file is shown in the figure below.
 ![image info](https://raw.githubusercontent.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/gh-pages/file_structure.png)
 
 ### ***Generate new dataset:***
