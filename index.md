@@ -16,7 +16,7 @@ This is a synthetic building operation dataset which includes HVAC, lighting, mi
 
 
 ### ***Access the Dataset***
-The dataset is registered with the U.S. Department of Energy's [Open Energy Data Initiative (OEDI)](https://data.openei.org/) and is stored with Amazon Simple Storage Service (S3). More details about the service can be found at this [site](https://registry.opendata.aws/oedi-data-lake/). To download the dataset, first make sure the [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) is installed. Then, make sure you have enough (>1.2TB) disk space, and run the command below to download the file to the <local_directory\>.
+The dataset is registered with the U.S. Department of Energy's [Open Energy Data Initiative (OEDI)](https://data.openei.org/submissions/2977) and is stored with Amazon Simple Storage Service (S3). More details about the service can be found at this [site](https://registry.opendata.aws/oedi-data-lake/). To download the dataset, first make sure the [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) is installed. Then, make sure you have enough (>1.2TB) disk space, and run the command below to download the file to the <local_directory\>.
 ```
 aws s3 cp s3://oedi-data-lake/building_synthetic_dataset/A_Synthetic_Building_Operation_Dataset.h5 <local_directory> --no-sign-request
 ```
