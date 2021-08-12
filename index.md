@@ -25,7 +25,7 @@ aws s3 cp s3://oedi-data-lake/building_synthetic_dataset/A_Synthetic_Building_Op
 
 This [Jupyter notebook](https://github.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/blob/master/A%20Synthetic%20Operation%20Dataset.ipynb) contains Python scripts, dependencies, functions to extract and explore the dataset. The structure of the file is shown in the figure below.
 ![image info](https://raw.githubusercontent.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/gh-pages/file_structure.png)
-A Brick model of the building could be downloaded [here](https://raw.githubusercontent.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/gh-pages/brick_relationships.ttl).
+A Brick model of the building could be downloaded [here](https://github.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/blob/gh-pages/brick_relationships.ttl).
 
 ### ***Generate new dataset:***
 High-level flow diagram could be found in the Methods section in the paper. 
