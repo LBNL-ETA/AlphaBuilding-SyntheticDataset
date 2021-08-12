@@ -1,0 +1,3094 @@
+@prefix bldg: <http://example.org/building#> .
+@prefix brick: <https://brickschema.org/schema/1.1/Brick#> .
+
+<http://example.org/building#100gal_Natural_Gas_Water_Heater_-_100kBtu/hr> a brick:Boiler ;
+    brick:isPartOf bldg:Main_Service_Water_Loop .
+
+bldg:21_Zone_PVAV_1_2spd_DX_Clg_Coil a brick:Cooling_Coil ;
+    brick:isPartOf bldg:21_Zone_PVAV_1 .
+
+bldg:21_Zone_PVAV_1_Fan_Electric_Power a brick:Power_Sensor ;
+    brick:isPointOf bldg:21_Zone_PVAV_1_Fan .
+
+bldg:21_Zone_PVAV_1_Main_Gas_Htg_Coil a brick:Heating_Coil ;
+    brick:isPartOf bldg:21_Zone_PVAV_1 .
+
+bldg:21_Zone_PVAV_1_OA_System a <https://brickschema.org/schema/1.1/Brick#??> .
+
+bldg:21_Zone_PVAV_2spd_DX_Clg_Coil a brick:Cooling_Coil ;
+    brick:isPartOf bldg:21_Zone_PVAV .
+
+bldg:21_Zone_PVAV_Fan_Electric_Power a brick:Power_Sensor ;
+    brick:isPointOf bldg:21_Zone_PVAV_Fan .
+
+bldg:21_Zone_PVAV_Main_Gas_Htg_Coil a brick:Heating_Coil ;
+    brick:isPartOf bldg:21_Zone_PVAV .
+
+bldg:21_Zone_PVAV_OA_System a <https://brickschema.org/schema/1.1/Brick#??> .
+
+bldg:23_Zone_PVAV_2spd_DX_Clg_Coil a brick:Cooling_Coil ;
+    brick:isPartOf bldg:23_Zone_PVAV .
+
+bldg:23_Zone_PVAV_Fan_Electric_Power a brick:Power_Sensor ;
+    brick:isPointOf bldg:23_Zone_PVAV_Fan .
+
+bldg:23_Zone_PVAV_Main_Gas_Htg_Coil a brick:Heating_Coil ;
+    brick:isPartOf bldg:23_Zone_PVAV .
+
+bldg:23_Zone_PVAV_OA_System a <https://brickschema.org/schema/1.1/Brick#??> .
+
+bldg:2_Elevator_Lift_Motors a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:Lobby_Bot .
+
+bldg:2_Elevator_Lift_Motors_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:Lobby_Bot ;
+    brick:isPointOf bldg:Lobby_Bot .
+
+bldg:ActiveStorage_Bot_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Bot_1_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Bot_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Bot_2_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Bot_3_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Bot_3_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Bot_4_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Bot_4_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Mid_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Mid_1_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Mid_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Mid_2_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Mid_3_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Mid_3_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Mid_4_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Mid_4_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Top_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Top_1_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Top_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Top_2_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Top_3_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Top_3_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Top_4_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ActiveStorage_Top_4_ZN_VAV_Terminal .
+
+bldg:ClassRoom_Bot_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ClassRoom_Bot_ZN_VAV_Terminal .
+
+bldg:ClassRoom_Bot_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ClassRoom_Bot .
+
+bldg:ClassRoom_Bot_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ClassRoom_Bot ;
+    brick:isPointOf bldg:ClassRoom_Bot .
+
+bldg:ClassRoom_Bot_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ClassRoom_Bot .
+
+bldg:ClassRoom_Bot_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ClassRoom_Bot ;
+    brick:isPointOf bldg:ClassRoom_Bot .
+
+bldg:ClassRoom_Bot_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ClassRoom_Bot ;
+    brick:isPointOf bldg:ClassRoom_Bot .
+
+bldg:ClassRoom_Bot_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ClassRoom_Bot ;
+    brick:isPointOf bldg:ClassRoom_Bot .
+
+bldg:ConfRoom_Bot_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ConfRoom_Bot_1_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Bot_1_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Bot_1 .
+
+bldg:ConfRoom_Bot_1_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_1 ;
+    brick:isPointOf bldg:ConfRoom_Bot_1 .
+
+bldg:ConfRoom_Bot_1_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Bot_1 .
+
+bldg:ConfRoom_Bot_1_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_1 ;
+    brick:isPointOf bldg:ConfRoom_Bot_1 .
+
+bldg:ConfRoom_Bot_1_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_1 ;
+    brick:isPointOf bldg:ConfRoom_Bot_1 .
+
+bldg:ConfRoom_Bot_1_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_1 ;
+    brick:isPointOf bldg:ConfRoom_Bot_1 .
+
+bldg:ConfRoom_Bot_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ConfRoom_Bot_2_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Bot_2_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Bot_2 .
+
+bldg:ConfRoom_Bot_2_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_2 ;
+    brick:isPointOf bldg:ConfRoom_Bot_2 .
+
+bldg:ConfRoom_Bot_2_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Bot_2 .
+
+bldg:ConfRoom_Bot_2_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_2 ;
+    brick:isPointOf bldg:ConfRoom_Bot_2 .
+
+bldg:ConfRoom_Bot_2_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_2 ;
+    brick:isPointOf bldg:ConfRoom_Bot_2 .
+
+bldg:ConfRoom_Bot_2_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_2 ;
+    brick:isPointOf bldg:ConfRoom_Bot_2 .
+
+bldg:ConfRoom_Mid_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ConfRoom_Mid_1_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Mid_1_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Mid_1 .
+
+bldg:ConfRoom_Mid_1_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_1 ;
+    brick:isPointOf bldg:ConfRoom_Mid_1 .
+
+bldg:ConfRoom_Mid_1_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Mid_1 .
+
+bldg:ConfRoom_Mid_1_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_1 ;
+    brick:isPointOf bldg:ConfRoom_Mid_1 .
+
+bldg:ConfRoom_Mid_1_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_1 ;
+    brick:isPointOf bldg:ConfRoom_Mid_1 .
+
+bldg:ConfRoom_Mid_1_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_1 ;
+    brick:isPointOf bldg:ConfRoom_Mid_1 .
+
+bldg:ConfRoom_Mid_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ConfRoom_Mid_2_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Mid_2_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Mid_2 .
+
+bldg:ConfRoom_Mid_2_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_2 ;
+    brick:isPointOf bldg:ConfRoom_Mid_2 .
+
+bldg:ConfRoom_Mid_2_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Mid_2 .
+
+bldg:ConfRoom_Mid_2_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_2 ;
+    brick:isPointOf bldg:ConfRoom_Mid_2 .
+
+bldg:ConfRoom_Mid_2_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_2 ;
+    brick:isPointOf bldg:ConfRoom_Mid_2 .
+
+bldg:ConfRoom_Mid_2_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_2 ;
+    brick:isPointOf bldg:ConfRoom_Mid_2 .
+
+bldg:ConfRoom_Top_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ConfRoom_Top_1_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Top_1_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Top_1 .
+
+bldg:ConfRoom_Top_1_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_1 ;
+    brick:isPointOf bldg:ConfRoom_Top_1 .
+
+bldg:ConfRoom_Top_1_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Top_1 .
+
+bldg:ConfRoom_Top_1_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_1 ;
+    brick:isPointOf bldg:ConfRoom_Top_1 .
+
+bldg:ConfRoom_Top_1_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_1 ;
+    brick:isPointOf bldg:ConfRoom_Top_1 .
+
+bldg:ConfRoom_Top_1_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_1 ;
+    brick:isPointOf bldg:ConfRoom_Top_1 .
+
+bldg:ConfRoom_Top_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:ConfRoom_Top_2_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Top_2_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Top_2 .
+
+bldg:ConfRoom_Top_2_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_2 ;
+    brick:isPointOf bldg:ConfRoom_Top_2 .
+
+bldg:ConfRoom_Top_2_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ConfRoom_Top_2 .
+
+bldg:ConfRoom_Top_2_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_2 ;
+    brick:isPointOf bldg:ConfRoom_Top_2 .
+
+bldg:ConfRoom_Top_2_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_2 ;
+    brick:isPointOf bldg:ConfRoom_Top_2 .
+
+bldg:ConfRoom_Top_2_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_2 ;
+    brick:isPointOf bldg:ConfRoom_Top_2 .
+
+bldg:Corridor_Bot_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Corridor_Bot_1_ZN_VAV_Terminal .
+
+bldg:Corridor_Bot_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Corridor_Bot_2_ZN_VAV_Terminal .
+
+bldg:Corridor_Mid_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Corridor_Mid_1_ZN_VAV_Terminal .
+
+bldg:Corridor_Mid_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Corridor_Mid_2_ZN_VAV_Terminal .
+
+bldg:Corridor_Top_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Corridor_Top_1_ZN_VAV_Terminal .
+
+bldg:Corridor_Top_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Corridor_Top_2_ZN_VAV_Terminal .
+
+bldg:Dining_Bot_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Dining_Bot_ZN_VAV_Terminal .
+
+bldg:Dining_Mid_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Dining_Mid_ZN_VAV_Terminal .
+
+bldg:Electricity:Facility a brick:Building_Electrical_Meter ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Electricity:HVAC a brick:Electrical_Meter ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:EnclosedOffice_Bot_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_1_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Bot_1_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_1 .
+
+bldg:EnclosedOffice_Bot_1_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_1 .
+
+bldg:EnclosedOffice_Bot_1_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_1 .
+
+bldg:EnclosedOffice_Bot_1_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_1 .
+
+bldg:EnclosedOffice_Bot_1_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_1 .
+
+bldg:EnclosedOffice_Bot_1_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_1 .
+
+bldg:EnclosedOffice_Bot_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_2_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Bot_2_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_2 .
+
+bldg:EnclosedOffice_Bot_2_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_2 .
+
+bldg:EnclosedOffice_Bot_2_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_2 .
+
+bldg:EnclosedOffice_Bot_2_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_2 .
+
+bldg:EnclosedOffice_Bot_2_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_2 .
+
+bldg:EnclosedOffice_Bot_2_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_2 .
+
+bldg:EnclosedOffice_Bot_3_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_3_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Bot_3_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_3 .
+
+bldg:EnclosedOffice_Bot_3_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_3 .
+
+bldg:EnclosedOffice_Bot_3_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_3 .
+
+bldg:EnclosedOffice_Bot_3_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_3 .
+
+bldg:EnclosedOffice_Bot_3_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_3 .
+
+bldg:EnclosedOffice_Bot_3_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_3 .
+
+bldg:EnclosedOffice_Bot_4_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_4_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Bot_4_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_4 .
+
+bldg:EnclosedOffice_Bot_4_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_4 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_4 .
+
+bldg:EnclosedOffice_Bot_4_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_4 .
+
+bldg:EnclosedOffice_Bot_4_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_4 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_4 .
+
+bldg:EnclosedOffice_Bot_4_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_4 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_4 .
+
+bldg:EnclosedOffice_Bot_4_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_4 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_4 .
+
+bldg:EnclosedOffice_Mid_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_1_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Mid_1_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_1 .
+
+bldg:EnclosedOffice_Mid_1_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_1 .
+
+bldg:EnclosedOffice_Mid_1_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_1 .
+
+bldg:EnclosedOffice_Mid_1_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_1 .
+
+bldg:EnclosedOffice_Mid_1_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_1 .
+
+bldg:EnclosedOffice_Mid_1_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_1 .
+
+bldg:EnclosedOffice_Mid_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_2_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Mid_2_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_2 .
+
+bldg:EnclosedOffice_Mid_2_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_2 .
+
+bldg:EnclosedOffice_Mid_2_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_2 .
+
+bldg:EnclosedOffice_Mid_2_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_2 .
+
+bldg:EnclosedOffice_Mid_2_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_2 .
+
+bldg:EnclosedOffice_Mid_2_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_2 .
+
+bldg:EnclosedOffice_Mid_3_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_3_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Mid_3_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_3 .
+
+bldg:EnclosedOffice_Mid_3_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_3 .
+
+bldg:EnclosedOffice_Mid_3_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_3 .
+
+bldg:EnclosedOffice_Mid_3_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_3 .
+
+bldg:EnclosedOffice_Mid_3_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_3 .
+
+bldg:EnclosedOffice_Mid_3_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_3 .
+
+bldg:EnclosedOffice_Top_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:EnclosedOffice_Top_1_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Top_1_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Top_1 .
+
+bldg:EnclosedOffice_Top_1_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_1 .
+
+bldg:EnclosedOffice_Top_1_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Top_1 .
+
+bldg:EnclosedOffice_Top_1_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_1 .
+
+bldg:EnclosedOffice_Top_1_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_1 .
+
+bldg:EnclosedOffice_Top_1_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_1 .
+
+bldg:EnclosedOffice_Top_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:EnclosedOffice_Top_2_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Top_2_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Top_2 .
+
+bldg:EnclosedOffice_Top_2_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_2 .
+
+bldg:EnclosedOffice_Top_2_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Top_2 .
+
+bldg:EnclosedOffice_Top_2_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_2 .
+
+bldg:EnclosedOffice_Top_2_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_2 .
+
+bldg:EnclosedOffice_Top_2_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_2 .
+
+bldg:EnclosedOffice_Top_3_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:EnclosedOffice_Top_3_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Top_3_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Top_3 .
+
+bldg:EnclosedOffice_Top_3_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_3 .
+
+bldg:EnclosedOffice_Top_3_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:EnclosedOffice_Top_3 .
+
+bldg:EnclosedOffice_Top_3_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_3 .
+
+bldg:EnclosedOffice_Top_3_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_3 .
+
+bldg:EnclosedOffice_Top_3_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_3 .
+
+bldg:ExteriorLights:Electricity a brick:Electrical_Meter ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Fans:Electricity a brick:Electrical_Meter ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Gas:Facility a brick:Building_Gas_Meter ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Gas:HVAC a brick:Gas_Meter ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Heating:Electricity a brick:Electrical_Meter ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:InteriorEquipment:Electricity a brick:Electrical_Meter ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:InteriorLights:Electricity a brick:Electrical_Meter ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Lobby_Bot_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Lobby_Bot_ZN_VAV_Terminal .
+
+bldg:Lobby_Mid_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Lobby_Mid_ZN_VAV_Terminal .
+
+bldg:Lobby_Top_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Lobby_Top_ZN_VAV_Terminal .
+
+bldg:Lounge_Bot_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Lounge_Bot_ZN_VAV_Terminal .
+
+bldg:Main_Service_Water_Loop_Circulator_Pump a brick:Pump ;
+    brick:isPartOf bldg:Main_Service_Water_Loop .
+
+bldg:Main_Service_Water_Loop_Circulator_Pump_Pumps_Electric_Power a brick:Power_Sensor ;
+    brick:isPointOf bldg:Main_Service_Water_Loop .
+
+bldg:Mechanical_Bot_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Mechanical_Bot_ZN_VAV_Terminal .
+
+bldg:Mechanical_Mid_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Mechanical_Mid_ZN_VAV_Terminal .
+
+bldg:Mechanical_Top_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Mechanical_Top_ZN_VAV_Terminal .
+
+bldg:MediumOffice_-_Corridor_Thermostat_1 a brick:Thermostat ;
+    brick:hasLocation bldg:Corridor_Bot_1 ;
+    brick:isPointOf bldg:Corridor_Bot_1_ZN .
+
+bldg:MediumOffice_-_Corridor_Thermostat_2 a brick:Thermostat ;
+    brick:hasLocation bldg:Corridor_Bot_2 ;
+    brick:isPointOf bldg:Corridor_Bot_2_ZN .
+
+bldg:MediumOffice_-_Corridor_Thermostat_3 a brick:Thermostat ;
+    brick:hasLocation bldg:Corridor_Mid_1 ;
+    brick:isPointOf bldg:Corridor_Mid_1_ZN .
+
+bldg:MediumOffice_-_Corridor_Thermostat_4 a brick:Thermostat ;
+    brick:hasLocation bldg:Corridor_Mid_2 ;
+    brick:isPointOf bldg:Corridor_Mid_2_ZN .
+
+bldg:MediumOffice_-_Corridor_Thermostat_5 a brick:Thermostat ;
+    brick:hasLocation bldg:Corridor_Top_1 ;
+    brick:isPointOf bldg:Corridor_Top_1_ZN .
+
+bldg:MediumOffice_-_Corridor_Thermostat_6 a brick:Thermostat ;
+    brick:hasLocation bldg:Corridor_Top_2 ;
+    brick:isPointOf bldg:Corridor_Top_2_ZN .
+
+bldg:MediumOffice_-_Dining_Thermostat_1 a brick:Thermostat ;
+    brick:hasLocation bldg:Dining_Bot ;
+    brick:isPointOf bldg:Dining_Bot_ZN .
+
+bldg:MediumOffice_-_Dining_Thermostat_2 a brick:Thermostat ;
+    brick:hasLocation bldg:Dining_Mid ;
+    brick:isPointOf bldg:Dining_Mid_ZN .
+
+bldg:MediumOffice_-_Lobby_Thermostat_1 a brick:Thermostat ;
+    brick:hasLocation bldg:Lobby_Bot ;
+    brick:isPointOf bldg:Lobby_Bot_ZN .
+
+bldg:MediumOffice_-_Lobby_Thermostat_2 a brick:Thermostat ;
+    brick:hasLocation bldg:Lobby_Mid ;
+    brick:isPointOf bldg:Lobby_Mid_ZN .
+
+bldg:MediumOffice_-_Lobby_Thermostat_3 a brick:Thermostat ;
+    brick:hasLocation bldg:Lobby_Top ;
+    brick:isPointOf bldg:Lobby_Top_ZN .
+
+bldg:MediumOffice_-_Lobby_Thermostat_4 a brick:Thermostat ;
+    brick:hasLocation bldg:Lounge_Bot ;
+    brick:isPointOf bldg:Lounge_Bot_ZN .
+
+bldg:MediumOffice_-_Restroom_Thermostat_1 a brick:Thermostat ;
+    brick:hasLocation bldg:Restroom_Bot ;
+    brick:isPointOf bldg:Restroom_Bot_ZN .
+
+bldg:MediumOffice_-_Restroom_Thermostat_2 a brick:Thermostat ;
+    brick:hasLocation bldg:Restroom_Mid ;
+    brick:isPointOf bldg:Restroom_Mid_ZN .
+
+bldg:MediumOffice_-_Restroom_Thermostat_3 a brick:Thermostat ;
+    brick:hasLocation bldg:Restroom_Top ;
+    brick:isPointOf bldg:Restroom_Top_ZN .
+
+bldg:MediumOffice_-_Stair_Thermostat_1 a brick:Thermostat ;
+    brick:hasLocation bldg:Stair_Bot_1 ;
+    brick:isPointOf bldg:Stair_Bot_1_ZN .
+
+bldg:MediumOffice_-_Stair_Thermostat_2 a brick:Thermostat ;
+    brick:hasLocation bldg:Stair_Bot_2 ;
+    brick:isPointOf bldg:Stair_Bot_2_ZN .
+
+bldg:MediumOffice_-_Stair_Thermostat_3 a brick:Thermostat ;
+    brick:hasLocation bldg:Stair_Mid_1 ;
+    brick:isPointOf bldg:Stair_Mid_1_ZN .
+
+bldg:MediumOffice_-_Stair_Thermostat_4 a brick:Thermostat ;
+    brick:hasLocation bldg:Stair_Mid_2 ;
+    brick:isPointOf bldg:Stair_Mid_2_ZN .
+
+bldg:MediumOffice_-_Stair_Thermostat_5 a brick:Thermostat ;
+    brick:hasLocation bldg:Stair_Top_1 ;
+    brick:isPointOf bldg:Stair_Top_1_ZN .
+
+bldg:MediumOffice_-_Stair_Thermostat_6 a brick:Thermostat ;
+    brick:hasLocation bldg:Stair_Top_2 ;
+    brick:isPointOf bldg:Stair_Top_2_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_1 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Bot_1 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_1_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_10 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Top_2 ;
+    brick:isPointOf bldg:ActiveStorage_Top_2_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_11 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Top_3 ;
+    brick:isPointOf bldg:ActiveStorage_Top_3_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_12 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Top_4 ;
+    brick:isPointOf bldg:ActiveStorage_Top_4_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_2 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Bot_2 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_2_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_3 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Bot_3 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_3_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_4 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Bot_4 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_4_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_5 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Mid_1 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_1_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_6 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Mid_2 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_2_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_7 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Mid_3 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_3_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_8 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Mid_4 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_4_ZN .
+
+bldg:MediumOffice_-_Storage_Thermostat_9 a brick:Thermostat ;
+    brick:hasLocation bldg:ActiveStorage_Top_1 ;
+    brick:isPointOf bldg:ActiveStorage_Top_1_ZN .
+
+bldg:Model_Outdoor_Air_Node a brick:Outside_Air .
+
+bldg:Model_Outdoor_Air_Node_Pressure a brick:Static_Pressure_Setpoint ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Model_Outdoor_Air_Node_Relative_Humidity a brick:Outside_Air_Humidity_Sensor ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Model_Outdoor_Air_Node_Temperature a brick:Outside_Air_Temperature_Sensor ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+<http://example.org/building#N.A.> a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:ActiveStorage_Bot_1,
+        bldg:ActiveStorage_Bot_2,
+        bldg:ActiveStorage_Bot_3,
+        bldg:ActiveStorage_Bot_4,
+        bldg:ActiveStorage_Mid_1,
+        bldg:ActiveStorage_Mid_2,
+        bldg:ActiveStorage_Mid_3,
+        bldg:ActiveStorage_Mid_4,
+        bldg:ActiveStorage_Top_1,
+        bldg:ActiveStorage_Top_2,
+        bldg:ActiveStorage_Top_3,
+        bldg:ActiveStorage_Top_4,
+        bldg:Corridor_Bot_1,
+        bldg:Corridor_Bot_2,
+        bldg:Corridor_Mid_1,
+        bldg:Corridor_Mid_2,
+        bldg:Corridor_Top_1,
+        bldg:Corridor_Top_2,
+        bldg:Dining_Bot,
+        bldg:Dining_Mid,
+        bldg:Lobby_Bot,
+        bldg:Lobby_Mid,
+        bldg:Lobby_Top,
+        bldg:Lounge_Bot,
+        bldg:Mechanical_Bot,
+        bldg:Mechanical_Mid,
+        bldg:Mechanical_Top,
+        bldg:Restroom_Bot,
+        bldg:Restroom_Mid,
+        bldg:Restroom_Top,
+        bldg:Stair_Bot_1,
+        bldg:Stair_Bot_2,
+        bldg:Stair_Mid_1,
+        bldg:Stair_Mid_2,
+        bldg:Stair_Top_1,
+        bldg:Stair_Top_2 .
+
+bldg:N.A._Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_1,
+        bldg:ActiveStorage_Bot_2,
+        bldg:ActiveStorage_Bot_3,
+        bldg:ActiveStorage_Bot_4,
+        bldg:ActiveStorage_Mid_1,
+        bldg:ActiveStorage_Mid_2,
+        bldg:ActiveStorage_Mid_3,
+        bldg:ActiveStorage_Mid_4,
+        bldg:ActiveStorage_Top_1,
+        bldg:ActiveStorage_Top_2,
+        bldg:ActiveStorage_Top_3,
+        bldg:ActiveStorage_Top_4,
+        bldg:Corridor_Bot_1,
+        bldg:Corridor_Bot_2,
+        bldg:Corridor_Mid_1,
+        bldg:Corridor_Mid_2,
+        bldg:Corridor_Top_1,
+        bldg:Corridor_Top_2,
+        bldg:Dining_Bot,
+        bldg:Dining_Mid,
+        bldg:Lobby_Bot,
+        bldg:Lobby_Mid,
+        bldg:Lobby_Top,
+        bldg:Lounge_Bot,
+        bldg:Mechanical_Bot,
+        bldg:Mechanical_Mid,
+        bldg:Mechanical_Top,
+        bldg:Restroom_Bot,
+        bldg:Restroom_Mid,
+        bldg:Restroom_Top,
+        bldg:Stair_Bot_1,
+        bldg:Stair_Bot_2,
+        bldg:Stair_Mid_1,
+        bldg:Stair_Mid_2,
+        bldg:Stair_Top_1,
+        bldg:Stair_Top_2 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_1,
+        bldg:ActiveStorage_Bot_2,
+        bldg:ActiveStorage_Bot_3,
+        bldg:ActiveStorage_Bot_4,
+        bldg:ActiveStorage_Mid_1,
+        bldg:ActiveStorage_Mid_2,
+        bldg:ActiveStorage_Mid_3,
+        bldg:ActiveStorage_Mid_4,
+        bldg:ActiveStorage_Top_1,
+        bldg:ActiveStorage_Top_2,
+        bldg:ActiveStorage_Top_3,
+        bldg:ActiveStorage_Top_4,
+        bldg:Corridor_Bot_1,
+        bldg:Corridor_Bot_2,
+        bldg:Corridor_Mid_1,
+        bldg:Corridor_Mid_2,
+        bldg:Corridor_Top_1,
+        bldg:Corridor_Top_2,
+        bldg:Dining_Bot,
+        bldg:Dining_Mid,
+        bldg:Lobby_Bot,
+        bldg:Lobby_Mid,
+        bldg:Lobby_Top,
+        bldg:Lounge_Bot,
+        bldg:Mechanical_Bot,
+        bldg:Mechanical_Mid,
+        bldg:Mechanical_Top,
+        bldg:Restroom_Bot,
+        bldg:Restroom_Mid,
+        bldg:Restroom_Top,
+        bldg:Stair_Bot_1,
+        bldg:Stair_Bot_2,
+        bldg:Stair_Mid_1,
+        bldg:Stair_Mid_2,
+        bldg:Stair_Top_1,
+        bldg:Stair_Top_2 .
+
+bldg:N.A._Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_1,
+        bldg:ActiveStorage_Bot_2,
+        bldg:ActiveStorage_Bot_3,
+        bldg:ActiveStorage_Bot_4,
+        bldg:ActiveStorage_Mid_1,
+        bldg:ActiveStorage_Mid_2,
+        bldg:ActiveStorage_Mid_3,
+        bldg:ActiveStorage_Mid_4,
+        bldg:ActiveStorage_Top_1,
+        bldg:ActiveStorage_Top_2,
+        bldg:ActiveStorage_Top_3,
+        bldg:ActiveStorage_Top_4,
+        bldg:Corridor_Bot_1,
+        bldg:Corridor_Bot_2,
+        bldg:Corridor_Mid_1,
+        bldg:Corridor_Mid_2,
+        bldg:Corridor_Top_1,
+        bldg:Corridor_Top_2,
+        bldg:Dining_Bot,
+        bldg:Dining_Mid,
+        bldg:Lobby_Bot,
+        bldg:Lobby_Mid,
+        bldg:Lobby_Top,
+        bldg:Lounge_Bot,
+        bldg:Mechanical_Bot,
+        bldg:Mechanical_Mid,
+        bldg:Mechanical_Top,
+        bldg:Restroom_Bot,
+        bldg:Restroom_Mid,
+        bldg:Restroom_Top,
+        bldg:Stair_Bot_1,
+        bldg:Stair_Bot_2,
+        bldg:Stair_Mid_1,
+        bldg:Stair_Mid_2,
+        bldg:Stair_Top_1,
+        bldg:Stair_Top_2 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_1,
+        bldg:ActiveStorage_Bot_2,
+        bldg:ActiveStorage_Bot_3,
+        bldg:ActiveStorage_Bot_4,
+        bldg:ActiveStorage_Mid_1,
+        bldg:ActiveStorage_Mid_2,
+        bldg:ActiveStorage_Mid_3,
+        bldg:ActiveStorage_Mid_4,
+        bldg:ActiveStorage_Top_1,
+        bldg:ActiveStorage_Top_2,
+        bldg:ActiveStorage_Top_3,
+        bldg:ActiveStorage_Top_4,
+        bldg:Corridor_Bot_1,
+        bldg:Corridor_Bot_2,
+        bldg:Corridor_Mid_1,
+        bldg:Corridor_Mid_2,
+        bldg:Corridor_Top_1,
+        bldg:Corridor_Top_2,
+        bldg:Dining_Bot,
+        bldg:Dining_Mid,
+        bldg:Lobby_Bot,
+        bldg:Lobby_Mid,
+        bldg:Lobby_Top,
+        bldg:Lounge_Bot,
+        bldg:Mechanical_Bot,
+        bldg:Mechanical_Mid,
+        bldg:Mechanical_Top,
+        bldg:Restroom_Bot,
+        bldg:Restroom_Mid,
+        bldg:Restroom_Top,
+        bldg:Stair_Bot_1,
+        bldg:Stair_Bot_2,
+        bldg:Stair_Mid_1,
+        bldg:Stair_Mid_2,
+        bldg:Stair_Top_1,
+        bldg:Stair_Top_2 .
+
+bldg:N.A._Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_1,
+        bldg:ActiveStorage_Bot_2,
+        bldg:ActiveStorage_Bot_3,
+        bldg:ActiveStorage_Bot_4,
+        bldg:ActiveStorage_Mid_1,
+        bldg:ActiveStorage_Mid_2,
+        bldg:ActiveStorage_Mid_3,
+        bldg:ActiveStorage_Mid_4,
+        bldg:ActiveStorage_Top_1,
+        bldg:ActiveStorage_Top_2,
+        bldg:ActiveStorage_Top_3,
+        bldg:ActiveStorage_Top_4,
+        bldg:Corridor_Bot_1,
+        bldg:Corridor_Bot_2,
+        bldg:Corridor_Mid_1,
+        bldg:Corridor_Mid_2,
+        bldg:Corridor_Top_1,
+        bldg:Corridor_Top_2,
+        bldg:Dining_Bot,
+        bldg:Dining_Mid,
+        bldg:Lobby_Bot,
+        bldg:Lobby_Mid,
+        bldg:Lobby_Top,
+        bldg:Lounge_Bot,
+        bldg:Mechanical_Bot,
+        bldg:Mechanical_Mid,
+        bldg:Mechanical_Top,
+        bldg:Restroom_Bot,
+        bldg:Restroom_Mid,
+        bldg:Restroom_Top,
+        bldg:Stair_Bot_1,
+        bldg:Stair_Bot_2,
+        bldg:Stair_Mid_1,
+        bldg:Stair_Mid_2,
+        bldg:Stair_Top_1,
+        bldg:Stair_Top_2 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_1,
+        bldg:ActiveStorage_Bot_2,
+        bldg:ActiveStorage_Bot_3,
+        bldg:ActiveStorage_Bot_4,
+        bldg:ActiveStorage_Mid_1,
+        bldg:ActiveStorage_Mid_2,
+        bldg:ActiveStorage_Mid_3,
+        bldg:ActiveStorage_Mid_4,
+        bldg:ActiveStorage_Top_1,
+        bldg:ActiveStorage_Top_2,
+        bldg:ActiveStorage_Top_3,
+        bldg:ActiveStorage_Top_4,
+        bldg:Corridor_Bot_1,
+        bldg:Corridor_Bot_2,
+        bldg:Corridor_Mid_1,
+        bldg:Corridor_Mid_2,
+        bldg:Corridor_Top_1,
+        bldg:Corridor_Top_2,
+        bldg:Dining_Bot,
+        bldg:Dining_Mid,
+        bldg:Lobby_Bot,
+        bldg:Lobby_Mid,
+        bldg:Lobby_Top,
+        bldg:Lounge_Bot,
+        bldg:Mechanical_Bot,
+        bldg:Mechanical_Mid,
+        bldg:Mechanical_Top,
+        bldg:Restroom_Bot,
+        bldg:Restroom_Mid,
+        bldg:Restroom_Top,
+        bldg:Stair_Bot_1,
+        bldg:Stair_Bot_2,
+        bldg:Stair_Mid_1,
+        bldg:Stair_Mid_2,
+        bldg:Stair_Top_1,
+        bldg:Stair_Top_2 .
+
+bldg:Node_100_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_100_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_100_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_100_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_103_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_103_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_103_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_103_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_106_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_106_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_106_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_106_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_109_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_109_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_109_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_109_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_10_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Top_2 ;
+    brick:isPointOf bldg:ActiveStorage_Top_2_ZN .
+
+bldg:Node_10_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Top_2 ;
+    brick:isPointOf bldg:ActiveStorage_Top_2_ZN .
+
+bldg:Node_112_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_112_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_112_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_112_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_115_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_115_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_115_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_115_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_118_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_118_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_118_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_118_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_11_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Top_3 ;
+    brick:isPointOf bldg:ActiveStorage_Top_3_ZN .
+
+bldg:Node_11_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Top_3 ;
+    brick:isPointOf bldg:ActiveStorage_Top_3_ZN .
+
+bldg:Node_121_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_121_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_121_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_121_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_124_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_124_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_124_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_124_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_127_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_127_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_127_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_127_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_12_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Top_4 ;
+    brick:isPointOf bldg:ActiveStorage_Top_4_ZN .
+
+bldg:Node_12_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Top_4 ;
+    brick:isPointOf bldg:ActiveStorage_Top_4_ZN .
+
+bldg:Node_130_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_130_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_130_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_130_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_133_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_133_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_133_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_133_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_136_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_136_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_136_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_136_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_139_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_139_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_139_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_139_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_13_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ClassRoom_Bot ;
+    brick:isPointOf bldg:ClassRoom_Bot_ZN .
+
+bldg:Node_13_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ClassRoom_Bot ;
+    brick:isPointOf bldg:ClassRoom_Bot_ZN .
+
+bldg:Node_142_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_142_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_142_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_142_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_145_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_145_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_145_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_145_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_149_Flowrate a brick:Supply_Air_Flow_Sensor ;
+    brick:isPointOf bldg:21_Zone_PVAV .
+
+bldg:Node_149_Pressure a brick:Supply_Air_Static_Pressure_Sensor ;
+    brick:isPointOf bldg:21_Zone_PVAV .
+
+bldg:Node_149_Relative_Humidity a brick:Supply_Air_Humidity_Sensor ;
+    brick:isPointOf bldg:21_Zone_PVAV .
+
+bldg:Node_149_Temperature a brick:Supply_Air_Temperature_Sensor ;
+    brick:isPointOf bldg:21_Zone_PVAV .
+
+bldg:Node_14_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_1 ;
+    brick:isPointOf bldg:ConfRoom_Bot_1_ZN .
+
+bldg:Node_14_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_1 ;
+    brick:isPointOf bldg:ConfRoom_Bot_1_ZN .
+
+bldg:Node_152_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_152_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_152_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_152_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_15_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_2 ;
+    brick:isPointOf bldg:ConfRoom_Bot_2_ZN .
+
+bldg:Node_15_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Bot_2 ;
+    brick:isPointOf bldg:ConfRoom_Bot_2_ZN .
+
+bldg:Node_160_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_160_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_160_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_160_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_164_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_164_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_164_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_164_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_167_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_167_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_167_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_167_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_16_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_1 ;
+    brick:isPointOf bldg:ConfRoom_Mid_1_ZN .
+
+bldg:Node_16_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_1 ;
+    brick:isPointOf bldg:ConfRoom_Mid_1_ZN .
+
+bldg:Node_170_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_170_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_170_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_170_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_173_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_173_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_173_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_173_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_176_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_176_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_176_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_176_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_179_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_179_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_179_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_179_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_17_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_2 ;
+    brick:isPointOf bldg:ConfRoom_Mid_2_ZN .
+
+bldg:Node_17_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Mid_2 ;
+    brick:isPointOf bldg:ConfRoom_Mid_2_ZN .
+
+bldg:Node_182_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_182_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_182_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_182_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_185_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_185_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_185_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_185_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_188_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_188_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_188_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_188_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_18_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_1 ;
+    brick:isPointOf bldg:ConfRoom_Top_1_ZN .
+
+bldg:Node_18_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_1 ;
+    brick:isPointOf bldg:ConfRoom_Top_1_ZN .
+
+bldg:Node_191_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_191_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_191_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_191_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_194_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_194_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_194_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_194_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_197_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_197_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_197_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_197_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_19_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_2 ;
+    brick:isPointOf bldg:ConfRoom_Top_2_ZN .
+
+bldg:Node_19_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ConfRoom_Top_2 ;
+    brick:isPointOf bldg:ConfRoom_Top_2_ZN .
+
+bldg:Node_1_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_1 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_1_ZN .
+
+bldg:Node_1_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_1 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_1_ZN .
+
+bldg:Node_200_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_200_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_200_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_200_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_203_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_203_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_203_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_203_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_206_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_206_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_206_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_206_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_209_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_209_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_209_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_209_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_20_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Corridor_Bot_1 ;
+    brick:isPointOf bldg:Corridor_Bot_1_ZN .
+
+bldg:Node_20_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Corridor_Bot_1 ;
+    brick:isPointOf bldg:Corridor_Bot_1_ZN .
+
+bldg:Node_212_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_212_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_212_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_212_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_215_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_215_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_215_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_215_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_218_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_218_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_218_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_218_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_21_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Corridor_Bot_2 ;
+    brick:isPointOf bldg:Corridor_Bot_2_ZN .
+
+bldg:Node_21_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Corridor_Bot_2 ;
+    brick:isPointOf bldg:Corridor_Bot_2_ZN .
+
+bldg:Node_222_Flowrate a brick:Supply_Air_Flow_Sensor ;
+    brick:isPointOf bldg:21_Zone_PVAV_1 .
+
+bldg:Node_222_Pressure a brick:Supply_Air_Static_Pressure_Sensor ;
+    brick:isPointOf bldg:21_Zone_PVAV_1 .
+
+bldg:Node_222_Relative_Humidity a brick:Supply_Air_Humidity_Sensor ;
+    brick:isPointOf bldg:21_Zone_PVAV_1 .
+
+bldg:Node_222_Temperature a brick:Supply_Air_Temperature_Sensor ;
+    brick:isPointOf bldg:21_Zone_PVAV_1 .
+
+bldg:Node_225_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_225_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_225_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_225_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_22_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Corridor_Mid_1 ;
+    brick:isPointOf bldg:Corridor_Mid_1_ZN .
+
+bldg:Node_22_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Corridor_Mid_1 ;
+    brick:isPointOf bldg:Corridor_Mid_1_ZN .
+
+bldg:Node_233_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_233_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_233_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_233_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_237_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_237_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_237_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_237_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_23_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Corridor_Mid_2 ;
+    brick:isPointOf bldg:Corridor_Mid_2_ZN .
+
+bldg:Node_23_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Corridor_Mid_2 ;
+    brick:isPointOf bldg:Corridor_Mid_2_ZN .
+
+bldg:Node_240_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_240_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_240_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_240_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_243_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_243_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_243_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_243_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_246_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_246_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_246_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_246_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_249_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_249_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_249_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_249_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_24_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Corridor_Top_1 ;
+    brick:isPointOf bldg:Corridor_Top_1_ZN .
+
+bldg:Node_24_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Corridor_Top_1 ;
+    brick:isPointOf bldg:Corridor_Top_1_ZN .
+
+bldg:Node_252_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_252_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_252_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_252_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_255_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_255_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_255_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_255_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_258_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_258_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_258_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_258_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_25_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Corridor_Top_2 ;
+    brick:isPointOf bldg:Corridor_Top_2_ZN .
+
+bldg:Node_25_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Corridor_Top_2 ;
+    brick:isPointOf bldg:Corridor_Top_2_ZN .
+
+bldg:Node_261_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_261_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_261_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_261_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_264_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_264_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_264_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_264_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_267_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_267_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_267_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_267_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_26_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Dining_Bot ;
+    brick:isPointOf bldg:Dining_Bot_ZN .
+
+bldg:Node_26_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Dining_Bot ;
+    brick:isPointOf bldg:Dining_Bot_ZN .
+
+bldg:Node_270_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_270_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_270_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_270_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_273_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_273_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_273_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_273_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_279_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_279_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_279_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_279_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_27_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Dining_Mid ;
+    brick:isPointOf bldg:Dining_Mid_ZN .
+
+bldg:Node_27_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Dining_Mid ;
+    brick:isPointOf bldg:Dining_Mid_ZN .
+
+bldg:Node_282_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_282_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_282_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_282_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_285_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_285_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_285_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_285_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_288_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_288_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_288_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_288_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_291_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_291_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_291_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_291_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_295_Mass_Flow_Rate a brick:Supply_Water_Flow_Sensor ;
+    brick:isPointOf bldg:Main_Service_Water_Loop .
+
+bldg:Node_295_Pressure a brick:Pressure_Sensor ;
+    brick:isPointOf bldg:Main_Service_Water_Loop .
+
+bldg:Node_295_Setpoint a brick:Schedule_Temperature_Setpoint ;
+    brick:isPointOf bldg:Main_Service_Water_Loop .
+
+bldg:Node_295_Temperature a brick:Hot_Water_Supply_Temperature_Sensor ;
+    brick:isPointOf bldg:Main_Service_Water_Loop .
+
+bldg:Node_29_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_1_ZN .
+
+bldg:Node_29_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_1_ZN .
+
+bldg:Node_2_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_2 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_2_ZN .
+
+bldg:Node_2_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_2 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_2_ZN .
+
+bldg:Node_30_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_2_ZN .
+
+bldg:Node_30_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_2_ZN .
+
+bldg:Node_31_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_3_ZN .
+
+bldg:Node_31_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_3_ZN .
+
+bldg:Node_32_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_4 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_4_ZN .
+
+bldg:Node_32_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_4 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_4_ZN .
+
+bldg:Node_33_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_1_ZN .
+
+bldg:Node_33_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_1_ZN .
+
+bldg:Node_34_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_2_ZN .
+
+bldg:Node_34_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_2_ZN .
+
+bldg:Node_35_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_3_ZN .
+
+bldg:Node_35_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_3_ZN .
+
+bldg:Node_36_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_1_ZN .
+
+bldg:Node_36_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_1_ZN .
+
+bldg:Node_37_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_2_ZN .
+
+bldg:Node_37_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_2_ZN .
+
+bldg:Node_38_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_3_ZN .
+
+bldg:Node_38_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:EnclosedOffice_Top_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_3_ZN .
+
+bldg:Node_3_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_3 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_3_ZN .
+
+bldg:Node_3_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_3 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_3_ZN .
+
+bldg:Node_40_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Lobby_Bot ;
+    brick:isPointOf bldg:Lobby_Bot_ZN .
+
+bldg:Node_40_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Lobby_Bot ;
+    brick:isPointOf bldg:Lobby_Bot_ZN .
+
+bldg:Node_41_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Lobby_Mid ;
+    brick:isPointOf bldg:Lobby_Mid_ZN .
+
+bldg:Node_41_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Lobby_Mid ;
+    brick:isPointOf bldg:Lobby_Mid_ZN .
+
+bldg:Node_42_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Lobby_Top ;
+    brick:isPointOf bldg:Lobby_Top_ZN .
+
+bldg:Node_42_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Lobby_Top ;
+    brick:isPointOf bldg:Lobby_Top_ZN .
+
+bldg:Node_43_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Lounge_Bot ;
+    brick:isPointOf bldg:Lounge_Bot_ZN .
+
+bldg:Node_43_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Lounge_Bot ;
+    brick:isPointOf bldg:Lounge_Bot_ZN .
+
+bldg:Node_44_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Mechanical_Bot ;
+    brick:isPointOf bldg:Mechanical_Bot_ZN .
+
+bldg:Node_44_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Mechanical_Bot ;
+    brick:isPointOf bldg:Mechanical_Bot_ZN .
+
+bldg:Node_45_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Mechanical_Mid ;
+    brick:isPointOf bldg:Mechanical_Mid_ZN .
+
+bldg:Node_45_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Mechanical_Mid ;
+    brick:isPointOf bldg:Mechanical_Mid_ZN .
+
+bldg:Node_46_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Mechanical_Top ;
+    brick:isPointOf bldg:Mechanical_Top_ZN .
+
+bldg:Node_46_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Mechanical_Top ;
+    brick:isPointOf bldg:Mechanical_Top_ZN .
+
+bldg:Node_48_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_1 ;
+    brick:isPointOf bldg:OpenOffice_Bot_1_ZN .
+
+bldg:Node_48_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_1 ;
+    brick:isPointOf bldg:OpenOffice_Bot_1_ZN .
+
+bldg:Node_49_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_2 ;
+    brick:isPointOf bldg:OpenOffice_Bot_2_ZN .
+
+bldg:Node_49_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_2 ;
+    brick:isPointOf bldg:OpenOffice_Bot_2_ZN .
+
+bldg:Node_4_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_4 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_4_ZN .
+
+bldg:Node_4_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Bot_4 ;
+    brick:isPointOf bldg:ActiveStorage_Bot_4_ZN .
+
+bldg:Node_50_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_3 ;
+    brick:isPointOf bldg:OpenOffice_Bot_3_ZN .
+
+bldg:Node_50_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_3 ;
+    brick:isPointOf bldg:OpenOffice_Bot_3_ZN .
+
+bldg:Node_51_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_1 ;
+    brick:isPointOf bldg:OpenOffice_Mid_1_ZN .
+
+bldg:Node_51_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_1 ;
+    brick:isPointOf bldg:OpenOffice_Mid_1_ZN .
+
+bldg:Node_52_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_2 ;
+    brick:isPointOf bldg:OpenOffice_Mid_2_ZN .
+
+bldg:Node_52_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_2 ;
+    brick:isPointOf bldg:OpenOffice_Mid_2_ZN .
+
+bldg:Node_53_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_3 ;
+    brick:isPointOf bldg:OpenOffice_Mid_3_ZN .
+
+bldg:Node_53_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_3 ;
+    brick:isPointOf bldg:OpenOffice_Mid_3_ZN .
+
+bldg:Node_54_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_4 ;
+    brick:isPointOf bldg:OpenOffice_Mid_4_ZN .
+
+bldg:Node_54_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_4 ;
+    brick:isPointOf bldg:OpenOffice_Mid_4_ZN .
+
+bldg:Node_55_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_1 ;
+    brick:isPointOf bldg:OpenOffice_Top_1_ZN .
+
+bldg:Node_55_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_1 ;
+    brick:isPointOf bldg:OpenOffice_Top_1_ZN .
+
+bldg:Node_56_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_2 ;
+    brick:isPointOf bldg:OpenOffice_Top_2_ZN .
+
+bldg:Node_56_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_2 ;
+    brick:isPointOf bldg:OpenOffice_Top_2_ZN .
+
+bldg:Node_57_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_3 ;
+    brick:isPointOf bldg:OpenOffice_Top_3_ZN .
+
+bldg:Node_57_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_3 ;
+    brick:isPointOf bldg:OpenOffice_Top_3_ZN .
+
+bldg:Node_58_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_4 ;
+    brick:isPointOf bldg:OpenOffice_Top_4_ZN .
+
+bldg:Node_58_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_4 ;
+    brick:isPointOf bldg:OpenOffice_Top_4_ZN .
+
+bldg:Node_59_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Restroom_Bot ;
+    brick:isPointOf bldg:Restroom_Bot_ZN .
+
+bldg:Node_59_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Restroom_Bot ;
+    brick:isPointOf bldg:Restroom_Bot_ZN .
+
+bldg:Node_5_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Mid_1 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_1_ZN .
+
+bldg:Node_5_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Mid_1 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_1_ZN .
+
+bldg:Node_60_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Restroom_Mid ;
+    brick:isPointOf bldg:Restroom_Mid_ZN .
+
+bldg:Node_60_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Restroom_Mid ;
+    brick:isPointOf bldg:Restroom_Mid_ZN .
+
+bldg:Node_61_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Restroom_Top ;
+    brick:isPointOf bldg:Restroom_Top_ZN .
+
+bldg:Node_61_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Restroom_Top ;
+    brick:isPointOf bldg:Restroom_Top_ZN .
+
+bldg:Node_62_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Stair_Bot_1 ;
+    brick:isPointOf bldg:Stair_Bot_1_ZN .
+
+bldg:Node_62_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Stair_Bot_1 ;
+    brick:isPointOf bldg:Stair_Bot_1_ZN .
+
+bldg:Node_63_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Stair_Bot_2 ;
+    brick:isPointOf bldg:Stair_Bot_2_ZN .
+
+bldg:Node_63_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Stair_Bot_2 ;
+    brick:isPointOf bldg:Stair_Bot_2_ZN .
+
+bldg:Node_64_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Stair_Mid_1 ;
+    brick:isPointOf bldg:Stair_Mid_1_ZN .
+
+bldg:Node_64_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Stair_Mid_1 ;
+    brick:isPointOf bldg:Stair_Mid_1_ZN .
+
+bldg:Node_65_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Stair_Mid_2 ;
+    brick:isPointOf bldg:Stair_Mid_2_ZN .
+
+bldg:Node_65_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Stair_Mid_2 ;
+    brick:isPointOf bldg:Stair_Mid_2_ZN .
+
+bldg:Node_66_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Stair_Top_1 ;
+    brick:isPointOf bldg:Stair_Top_1_ZN .
+
+bldg:Node_66_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Stair_Top_1 ;
+    brick:isPointOf bldg:Stair_Top_1_ZN .
+
+bldg:Node_67_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:Stair_Top_2 ;
+    brick:isPointOf bldg:Stair_Top_2_ZN .
+
+bldg:Node_67_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:Stair_Top_2 ;
+    brick:isPointOf bldg:Stair_Top_2_ZN .
+
+bldg:Node_6_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Mid_2 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_2_ZN .
+
+bldg:Node_6_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Mid_2 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_2_ZN .
+
+bldg:Node_70_Flowrate a brick:Supply_Air_Flow_Sensor ;
+    brick:isPointOf bldg:23_Zone_PVAV .
+
+bldg:Node_70_Pressure a brick:Supply_Air_Static_Pressure_Sensor ;
+    brick:isPointOf bldg:23_Zone_PVAV .
+
+bldg:Node_70_Relative_Humidity a brick:Supply_Air_Humidity_Sensor ;
+    brick:isPointOf bldg:23_Zone_PVAV .
+
+bldg:Node_70_Temperature a brick:Supply_Air_Temperature_Sensor ;
+    brick:isPointOf bldg:23_Zone_PVAV .
+
+bldg:Node_73_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_73_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_73_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_73_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_7_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Mid_3 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_3_ZN .
+
+bldg:Node_7_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Mid_3 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_3_ZN .
+
+bldg:Node_81_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_81_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_81_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_81_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_85_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_85_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_85_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_85_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_88_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_88_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_88_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_88_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_8_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Mid_4 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_4_ZN .
+
+bldg:Node_8_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Mid_4 ;
+    brick:isPointOf bldg:ActiveStorage_Mid_4_ZN .
+
+bldg:Node_91_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_91_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_91_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_91_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_94_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_94_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_94_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_94_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_97_Flowrate a brick:Supply_Air_Flow_Sensor .
+
+bldg:Node_97_Pressure a brick:Supply_Air_Static_Pressure_Sensor .
+
+bldg:Node_97_Relative_Humidity a brick:Supply_Air_Humidity_Sensor .
+
+bldg:Node_97_Temperature a brick:Supply_Air_Temperature_Sensor .
+
+bldg:Node_9_Relative_Humidity a brick:Zone_Air_Humidity_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Top_1 ;
+    brick:isPointOf bldg:ActiveStorage_Top_1_ZN .
+
+bldg:Node_9_Temperature a brick:Zone_Air_Temperature_Sensor ;
+    brick:hasLocation bldg:ActiveStorage_Top_1 ;
+    brick:isPointOf bldg:ActiveStorage_Top_1_ZN .
+
+bldg:OpenOffice_Bot_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Bot_1_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Bot_1_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Bot_1 .
+
+bldg:OpenOffice_Bot_1_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_1 ;
+    brick:isPointOf bldg:OpenOffice_Bot_1 .
+
+bldg:OpenOffice_Bot_1_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Bot_1 .
+
+bldg:OpenOffice_Bot_1_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_1 ;
+    brick:isPointOf bldg:OpenOffice_Bot_1 .
+
+bldg:OpenOffice_Bot_1_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_1 ;
+    brick:isPointOf bldg:OpenOffice_Bot_1 .
+
+bldg:OpenOffice_Bot_1_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_1 ;
+    brick:isPointOf bldg:OpenOffice_Bot_1 .
+
+bldg:OpenOffice_Bot_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Bot_2_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Bot_2_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Bot_2 .
+
+bldg:OpenOffice_Bot_2_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_2 ;
+    brick:isPointOf bldg:OpenOffice_Bot_2 .
+
+bldg:OpenOffice_Bot_2_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Bot_2 .
+
+bldg:OpenOffice_Bot_2_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_2 ;
+    brick:isPointOf bldg:OpenOffice_Bot_2 .
+
+bldg:OpenOffice_Bot_2_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_2 ;
+    brick:isPointOf bldg:OpenOffice_Bot_2 .
+
+bldg:OpenOffice_Bot_2_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_2 ;
+    brick:isPointOf bldg:OpenOffice_Bot_2 .
+
+bldg:OpenOffice_Bot_3_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Bot_3_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Bot_3_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Bot_3 .
+
+bldg:OpenOffice_Bot_3_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_3 ;
+    brick:isPointOf bldg:OpenOffice_Bot_3 .
+
+bldg:OpenOffice_Bot_3_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Bot_3 .
+
+bldg:OpenOffice_Bot_3_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_3 ;
+    brick:isPointOf bldg:OpenOffice_Bot_3 .
+
+bldg:OpenOffice_Bot_3_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_3 ;
+    brick:isPointOf bldg:OpenOffice_Bot_3 .
+
+bldg:OpenOffice_Bot_3_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Bot_3 ;
+    brick:isPointOf bldg:OpenOffice_Bot_3 .
+
+bldg:OpenOffice_Mid_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Mid_1_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Mid_1_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Mid_1 .
+
+bldg:OpenOffice_Mid_1_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_1 ;
+    brick:isPointOf bldg:OpenOffice_Mid_1 .
+
+bldg:OpenOffice_Mid_1_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Mid_1 .
+
+bldg:OpenOffice_Mid_1_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_1 ;
+    brick:isPointOf bldg:OpenOffice_Mid_1 .
+
+bldg:OpenOffice_Mid_1_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_1 ;
+    brick:isPointOf bldg:OpenOffice_Mid_1 .
+
+bldg:OpenOffice_Mid_1_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_1 ;
+    brick:isPointOf bldg:OpenOffice_Mid_1 .
+
+bldg:OpenOffice_Mid_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Mid_2_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Mid_2_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Mid_2 .
+
+bldg:OpenOffice_Mid_2_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_2 ;
+    brick:isPointOf bldg:OpenOffice_Mid_2 .
+
+bldg:OpenOffice_Mid_2_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Mid_2 .
+
+bldg:OpenOffice_Mid_2_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_2 ;
+    brick:isPointOf bldg:OpenOffice_Mid_2 .
+
+bldg:OpenOffice_Mid_2_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_2 ;
+    brick:isPointOf bldg:OpenOffice_Mid_2 .
+
+bldg:OpenOffice_Mid_2_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_2 ;
+    brick:isPointOf bldg:OpenOffice_Mid_2 .
+
+bldg:OpenOffice_Mid_3_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Mid_3_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Mid_3_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Mid_3 .
+
+bldg:OpenOffice_Mid_3_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_3 ;
+    brick:isPointOf bldg:OpenOffice_Mid_3 .
+
+bldg:OpenOffice_Mid_3_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Mid_3 .
+
+bldg:OpenOffice_Mid_3_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_3 ;
+    brick:isPointOf bldg:OpenOffice_Mid_3 .
+
+bldg:OpenOffice_Mid_3_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_3 ;
+    brick:isPointOf bldg:OpenOffice_Mid_3 .
+
+bldg:OpenOffice_Mid_3_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_3 ;
+    brick:isPointOf bldg:OpenOffice_Mid_3 .
+
+bldg:OpenOffice_Mid_4_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Mid_4_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Mid_4_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Mid_4 .
+
+bldg:OpenOffice_Mid_4_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_4 ;
+    brick:isPointOf bldg:OpenOffice_Mid_4 .
+
+bldg:OpenOffice_Mid_4_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Mid_4 .
+
+bldg:OpenOffice_Mid_4_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_4 ;
+    brick:isPointOf bldg:OpenOffice_Mid_4 .
+
+bldg:OpenOffice_Mid_4_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_4 ;
+    brick:isPointOf bldg:OpenOffice_Mid_4 .
+
+bldg:OpenOffice_Mid_4_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Mid_4 ;
+    brick:isPointOf bldg:OpenOffice_Mid_4 .
+
+bldg:OpenOffice_Top_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Top_1_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Top_1_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Top_1 .
+
+bldg:OpenOffice_Top_1_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_1 ;
+    brick:isPointOf bldg:OpenOffice_Top_1 .
+
+bldg:OpenOffice_Top_1_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Top_1 .
+
+bldg:OpenOffice_Top_1_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_1 ;
+    brick:isPointOf bldg:OpenOffice_Top_1 .
+
+bldg:OpenOffice_Top_1_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_1 ;
+    brick:isPointOf bldg:OpenOffice_Top_1 .
+
+bldg:OpenOffice_Top_1_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_1 ;
+    brick:isPointOf bldg:OpenOffice_Top_1 .
+
+bldg:OpenOffice_Top_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Top_2_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Top_2_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Top_2 .
+
+bldg:OpenOffice_Top_2_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_2 ;
+    brick:isPointOf bldg:OpenOffice_Top_2 .
+
+bldg:OpenOffice_Top_2_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Top_2 .
+
+bldg:OpenOffice_Top_2_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_2 ;
+    brick:isPointOf bldg:OpenOffice_Top_2 .
+
+bldg:OpenOffice_Top_2_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_2 ;
+    brick:isPointOf bldg:OpenOffice_Top_2 .
+
+bldg:OpenOffice_Top_2_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_2 ;
+    brick:isPointOf bldg:OpenOffice_Top_2 .
+
+bldg:OpenOffice_Top_3_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Top_3_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Top_3_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Top_3 .
+
+bldg:OpenOffice_Top_3_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_3 ;
+    brick:isPointOf bldg:OpenOffice_Top_3 .
+
+bldg:OpenOffice_Top_3_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Top_3 .
+
+bldg:OpenOffice_Top_3_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_3 ;
+    brick:isPointOf bldg:OpenOffice_Top_3 .
+
+bldg:OpenOffice_Top_3_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_3 ;
+    brick:isPointOf bldg:OpenOffice_Top_3 .
+
+bldg:OpenOffice_Top_3_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_3 ;
+    brick:isPointOf bldg:OpenOffice_Top_3 .
+
+bldg:OpenOffice_Top_4_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:OpenOffice_Top_4_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Top_4_electric_equipment a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Top_4 .
+
+bldg:OpenOffice_Top_4_electric_equipment_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_4 ;
+    brick:isPointOf bldg:OpenOffice_Top_4 .
+
+bldg:OpenOffice_Top_4_light a brick:Electrical_Equipment ;
+    brick:hasLocation bldg:OpenOffice_Top_4 .
+
+bldg:OpenOffice_Top_4_light_Electric_Power a brick:Power_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_4 ;
+    brick:isPointOf bldg:OpenOffice_Top_4 .
+
+bldg:OpenOffice_Top_4_people_Occupancy_Status a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_4 ;
+    brick:isPointOf bldg:OpenOffice_Top_4 .
+
+bldg:OpenOffice_Top_4_people_Occupant_Count a brick:Occupancy_Sensor ;
+    brick:hasLocation bldg:OpenOffice_Top_4 ;
+    brick:isPointOf bldg:OpenOffice_Top_4 .
+
+bldg:Pumps:Electricity a brick:Electrical_Meter ;
+    brick:isPointOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Restroom_Bot_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Restroom_Bot_ZN_VAV_Terminal .
+
+bldg:Restroom_Mid_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Restroom_Mid_ZN_VAV_Terminal .
+
+bldg:Restroom_Top_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Restroom_Top_ZN_VAV_Terminal .
+
+bldg:Stair_Bot_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Stair_Bot_1_ZN_VAV_Terminal .
+
+bldg:Stair_Bot_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Stair_Bot_2_ZN_VAV_Terminal .
+
+bldg:Stair_Mid_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Stair_Mid_1_ZN_VAV_Terminal .
+
+bldg:Stair_Mid_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Stair_Mid_2_ZN_VAV_Terminal .
+
+bldg:Stair_Top_1_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Stair_Top_1_ZN_VAV_Terminal .
+
+bldg:Stair_Top_2_ZN_VAV_Terminal_Damper_Position a brick:Damper_Position_Sensor ;
+    brick:isPointOf bldg:Stair_Top_2_ZN_VAV_Terminal .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_1 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Top_4 ;
+    brick:isPointOf bldg:OpenOffice_Top_4_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_10 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Mid_3 ;
+    brick:isPointOf bldg:OpenOffice_Mid_3_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_11 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Top_2 ;
+    brick:isPointOf bldg:OpenOffice_Top_2_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_12 a brick:Thermostat ;
+    brick:hasLocation bldg:EnclosedOffice_Top_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_3_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_13 a brick:Thermostat ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_3_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_14 a brick:Thermostat ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_1_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_15 a brick:Thermostat ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_4 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_4_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_16 a brick:Thermostat ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_2_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_17 a brick:Thermostat ;
+    brick:hasLocation bldg:EnclosedOffice_Bot_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Bot_2_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_18 a brick:Thermostat ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_1_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_19 a brick:Thermostat ;
+    brick:hasLocation bldg:EnclosedOffice_Mid_3 ;
+    brick:isPointOf bldg:EnclosedOffice_Mid_3_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_2 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Mid_1 ;
+    brick:isPointOf bldg:OpenOffice_Mid_1_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_20 a brick:Thermostat ;
+    brick:hasLocation bldg:EnclosedOffice_Top_2 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_2_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_21 a brick:Thermostat ;
+    brick:hasLocation bldg:EnclosedOffice_Top_1 ;
+    brick:isPointOf bldg:EnclosedOffice_Top_1_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_22 a brick:Thermostat ;
+    brick:hasLocation bldg:ClassRoom_Bot ;
+    brick:isPointOf bldg:ClassRoom_Bot_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_23 a brick:Thermostat ;
+    brick:hasLocation bldg:ConfRoom_Bot_1 ;
+    brick:isPointOf bldg:ConfRoom_Bot_1_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_24 a brick:Thermostat ;
+    brick:hasLocation bldg:ConfRoom_Bot_2 ;
+    brick:isPointOf bldg:ConfRoom_Bot_2_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_25 a brick:Thermostat ;
+    brick:hasLocation bldg:ConfRoom_Top_2 ;
+    brick:isPointOf bldg:ConfRoom_Top_2_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_26 a brick:Thermostat ;
+    brick:hasLocation bldg:ConfRoom_Mid_2 ;
+    brick:isPointOf bldg:ConfRoom_Mid_2_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_27 a brick:Thermostat ;
+    brick:hasLocation bldg:ConfRoom_Mid_1 ;
+    brick:isPointOf bldg:ConfRoom_Mid_1_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_28 a brick:Thermostat ;
+    brick:hasLocation bldg:ConfRoom_Top_1 ;
+    brick:isPointOf bldg:ConfRoom_Top_1_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_29 a brick:Thermostat ;
+    brick:hasLocation bldg:Mechanical_Bot ;
+    brick:isPointOf bldg:Mechanical_Bot_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_3 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Top_1 ;
+    brick:isPointOf bldg:OpenOffice_Top_1_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_30 a brick:Thermostat ;
+    brick:hasLocation bldg:Mechanical_Mid ;
+    brick:isPointOf bldg:Mechanical_Mid_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_31 a brick:Thermostat ;
+    brick:hasLocation bldg:Mechanical_Top ;
+    brick:isPointOf bldg:Mechanical_Top_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_4 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Bot_2 ;
+    brick:isPointOf bldg:OpenOffice_Bot_2_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_5 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Bot_3 ;
+    brick:isPointOf bldg:OpenOffice_Bot_3_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_6 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Bot_1 ;
+    brick:isPointOf bldg:OpenOffice_Bot_1_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_7 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Mid_4 ;
+    brick:isPointOf bldg:OpenOffice_Mid_4_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_8 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Top_3 ;
+    brick:isPointOf bldg:OpenOffice_Top_3_ZN .
+
+bldg:Thermostat_Setpoint_Dual_Setpoint_9 a brick:Thermostat ;
+    brick:hasLocation bldg:OpenOffice_Mid_2 ;
+    brick:isPointOf bldg:OpenOffice_Mid_2_ZN .
+
+bldg:21_Zone_PVAV_1_Fan a brick:Supply_Fan ;
+    brick:isPartOf bldg:21_Zone_PVAV_1 .
+
+bldg:21_Zone_PVAV_Fan a brick:Supply_Fan ;
+    brick:isPartOf bldg:21_Zone_PVAV .
+
+bldg:23_Zone_PVAV_Fan a brick:Supply_Fan ;
+    brick:isPartOf bldg:23_Zone_PVAV .
+
+bldg:ActiveStorage_Bot_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:ActiveStorage_Bot_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:ActiveStorage_Bot_3_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:ActiveStorage_Bot_4_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:ActiveStorage_Mid_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:ActiveStorage_Mid_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:ActiveStorage_Mid_3_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:ActiveStorage_Mid_4_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:ActiveStorage_Top_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:ActiveStorage_Top_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:ActiveStorage_Top_3_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:ActiveStorage_Top_4_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:ClassRoom_Bot_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:ConfRoom_Bot_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:ConfRoom_Bot_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:ConfRoom_Mid_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:ConfRoom_Mid_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:ConfRoom_Top_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:ConfRoom_Top_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:Corridor_Bot_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:Corridor_Bot_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:Corridor_Mid_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:Corridor_Mid_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:Corridor_Top_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:Corridor_Top_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:Dining_Bot_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:Dining_Mid_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:EnclosedOffice_Bot_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:EnclosedOffice_Bot_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:EnclosedOffice_Bot_3_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:EnclosedOffice_Bot_4_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:EnclosedOffice_Mid_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:EnclosedOffice_Mid_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:EnclosedOffice_Mid_3_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:EnclosedOffice_Top_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:EnclosedOffice_Top_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:EnclosedOffice_Top_3_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:Lobby_Bot_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:Lobby_Mid_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:Lobby_Top_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:Lounge_Bot_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:Mechanical_Bot_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:Mechanical_Mid_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:Mechanical_Top_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:OpenOffice_Bot_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:OpenOffice_Bot_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:OpenOffice_Bot_3_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:OpenOffice_Mid_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:OpenOffice_Mid_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:OpenOffice_Mid_3_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:OpenOffice_Mid_4_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:OpenOffice_Top_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:OpenOffice_Top_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:OpenOffice_Top_3_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:OpenOffice_Top_4_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:Restroom_Bot_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:Restroom_Mid_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:Restroom_Top_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:Stair_Bot_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:Stair_Bot_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:23_Zone_PVAV .
+
+bldg:Stair_Mid_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:Stair_Mid_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV .
+
+bldg:Stair_Top_1_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:Stair_Top_2_ZN_VAV_Terminal a brick:VAV ;
+    brick:isFedBy bldg:21_Zone_PVAV_1 .
+
+bldg:ActiveStorage_Bot_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Bot_1_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Bot_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Bot_2_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Bot_3_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Bot_3_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Bot_4_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Bot_4_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Mid_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Mid_1_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Mid_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Mid_2_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Mid_3_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Mid_3_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Mid_4_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Mid_4_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Top_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Top_1_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Top_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Top_2_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Top_3_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Top_3_ZN_VAV_Terminal .
+
+bldg:ActiveStorage_Top_4_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ActiveStorage_Top_4_ZN_VAV_Terminal .
+
+bldg:ClassRoom_Bot_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ClassRoom_Bot_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Bot_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ConfRoom_Bot_1_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Bot_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ConfRoom_Bot_2_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Mid_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ConfRoom_Mid_1_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Mid_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ConfRoom_Mid_2_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Top_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ConfRoom_Top_1_ZN_VAV_Terminal .
+
+bldg:ConfRoom_Top_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:ConfRoom_Top_2_ZN_VAV_Terminal .
+
+bldg:Corridor_Bot_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Corridor_Bot_1_ZN_VAV_Terminal .
+
+bldg:Corridor_Bot_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Corridor_Bot_2_ZN_VAV_Terminal .
+
+bldg:Corridor_Mid_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Corridor_Mid_1_ZN_VAV_Terminal .
+
+bldg:Corridor_Mid_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Corridor_Mid_2_ZN_VAV_Terminal .
+
+bldg:Corridor_Top_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Corridor_Top_1_ZN_VAV_Terminal .
+
+bldg:Corridor_Top_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Corridor_Top_2_ZN_VAV_Terminal .
+
+bldg:Dining_Bot_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Dining_Bot_ZN_VAV_Terminal .
+
+bldg:Dining_Mid_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Dining_Mid_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Bot_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:EnclosedOffice_Bot_1_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Bot_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:EnclosedOffice_Bot_2_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Bot_3_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:EnclosedOffice_Bot_3_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Bot_4_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:EnclosedOffice_Bot_4_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Mid_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:EnclosedOffice_Mid_1_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Mid_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:EnclosedOffice_Mid_2_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Mid_3_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:EnclosedOffice_Mid_3_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Top_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:EnclosedOffice_Top_1_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Top_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:EnclosedOffice_Top_2_ZN_VAV_Terminal .
+
+bldg:EnclosedOffice_Top_3_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:EnclosedOffice_Top_3_ZN_VAV_Terminal .
+
+bldg:Lobby_Bot_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Lobby_Bot_ZN_VAV_Terminal .
+
+bldg:Lobby_Mid_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Lobby_Mid_ZN_VAV_Terminal .
+
+bldg:Lobby_Top_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Lobby_Top_ZN_VAV_Terminal .
+
+bldg:Lounge_Bot_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Lounge_Bot_ZN_VAV_Terminal .
+
+bldg:Mechanical_Bot_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Mechanical_Bot_ZN_VAV_Terminal .
+
+bldg:Mechanical_Mid_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Mechanical_Mid_ZN_VAV_Terminal .
+
+bldg:Mechanical_Top_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Mechanical_Top_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Bot_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Bot_1_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Bot_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Bot_2_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Bot_3_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Bot_3_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Mid_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Mid_1_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Mid_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Mid_2_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Mid_3_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Mid_3_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Mid_4_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Mid_4_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Top_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Top_1_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Top_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Top_2_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Top_3_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Top_3_ZN_VAV_Terminal .
+
+bldg:OpenOffice_Top_4_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:OpenOffice_Top_4_ZN_VAV_Terminal .
+
+bldg:Restroom_Bot_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Restroom_Bot_ZN_VAV_Terminal .
+
+bldg:Restroom_Mid_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Restroom_Mid_ZN_VAV_Terminal .
+
+bldg:Restroom_Top_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Restroom_Top_ZN_VAV_Terminal .
+
+bldg:Stair_Bot_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Stair_Bot_1_ZN_VAV_Terminal .
+
+bldg:Stair_Bot_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Stair_Bot_2_ZN_VAV_Terminal .
+
+bldg:Stair_Mid_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Stair_Mid_1_ZN_VAV_Terminal .
+
+bldg:Stair_Mid_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Stair_Mid_2_ZN_VAV_Terminal .
+
+bldg:Stair_Top_1_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Stair_Top_1_ZN_VAV_Terminal .
+
+bldg:Stair_Top_2_ZN a brick:HVAC_Zone ;
+    brick:isFedBy bldg:Stair_Top_2_ZN_VAV_Terminal .
+
+bldg:Main_Service_Water_Loop a brick:System .
+
+bldg:ActiveStorage_Bot_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:ActiveStorage_Bot_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:ActiveStorage_Bot_3 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:ActiveStorage_Bot_4 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:ActiveStorage_Mid_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:ActiveStorage_Mid_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:ActiveStorage_Mid_3 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:ActiveStorage_Mid_4 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:ActiveStorage_Top_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:ActiveStorage_Top_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:ActiveStorage_Top_3 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:ActiveStorage_Top_4 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:Corridor_Bot_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:Corridor_Bot_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:Corridor_Mid_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:Corridor_Mid_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:Corridor_Top_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:Corridor_Top_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:Dining_Bot a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:Dining_Mid a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:Lobby_Mid a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:Lobby_Top a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:Lounge_Bot a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:Mechanical_Bot a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:Mechanical_Mid a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:Mechanical_Top a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:Restroom_Bot a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:Restroom_Mid a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:Restroom_Top a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:Stair_Bot_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:Stair_Bot_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:Stair_Mid_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:Stair_Mid_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:Stair_Top_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:Stair_Top_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:ClassRoom_Bot a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:ConfRoom_Bot_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:ConfRoom_Bot_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:ConfRoom_Mid_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:ConfRoom_Mid_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:ConfRoom_Top_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:ConfRoom_Top_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:EnclosedOffice_Bot_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:EnclosedOffice_Bot_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:EnclosedOffice_Bot_3 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:EnclosedOffice_Bot_4 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:EnclosedOffice_Mid_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:EnclosedOffice_Mid_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:EnclosedOffice_Mid_3 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:EnclosedOffice_Top_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:EnclosedOffice_Top_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:EnclosedOffice_Top_3 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:Lobby_Bot a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:OpenOffice_Bot_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:OpenOffice_Bot_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:OpenOffice_Bot_3 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_1 .
+
+bldg:OpenOffice_Mid_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:OpenOffice_Mid_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:OpenOffice_Mid_3 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:OpenOffice_Mid_4 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_2 .
+
+bldg:OpenOffice_Top_1 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:OpenOffice_Top_2 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:OpenOffice_Top_3 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+bldg:OpenOffice_Top_4 a brick:Space ;
+    brick:isPartOf bldg:Building_Story_3 .
+
+<http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> a brick:Building ;
+    brick:isFedBy bldg:Main_Service_Water_Loop .
+
+bldg:Building_Story_2 a brick:Storey ;
+    brick:isPartOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Building_Story_3 a brick:Storey ;
+    brick:isPartOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:Building_Story_1 a brick:Storey ;
+    brick:isPartOf <http://example.org/building#-MediumOfficeDetailed-ASHRAE_169-2006-5A_created:_2020-09-29_13:02:54_-0700> .
+
+bldg:21_Zone_PVAV_1 a brick:AHU .
+
+bldg:21_Zone_PVAV a brick:AHU .
+
+bldg:23_Zone_PVAV a brick:AHU .
+

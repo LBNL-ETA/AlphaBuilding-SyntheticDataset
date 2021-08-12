@@ -1,8 +1,8 @@
 ## A Synthetic Building Operation Dataset
 
 
-This is the official repository prepared for a dataset descriptor - A Synthetic Building Operation Dataset submitted to the [Scientific Data](https://www.nature.com/sdata/) journal. 
-> *Han Li, Zhe Wang, Tianzhen Hong. 2021. A Synthetic Building Operation Dataset. Submitted to Scientific Data*
+This is the official repository prepared for a dataset descriptor - A Synthetic Building Operation Dataset published in [Scientific Data](https://www.nature.com/sdata/) journal. 
+> *Li, H., Wang, Z. & Hong, T. A synthetic building operation dataset. Sci Data 8, 213 (2021). https://doi.org/10.1038/s41597-021-00989-6*
 
 It contains:
 1. A brief introduction to the dataset.
@@ -25,6 +25,7 @@ aws s3 cp s3://oedi-data-lake/building_synthetic_dataset/A_Synthetic_Building_Op
 
 This [Jupyter notebook](https://github.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/blob/master/A%20Synthetic%20Operation%20Dataset.ipynb) contains Python scripts, dependencies, functions to extract and explore the dataset. The structure of the file is shown in the figure below.
 ![image info](https://raw.githubusercontent.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/gh-pages/file_structure.png)
+A Brick model of the building could be downloaded [here](https://raw.githubusercontent.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/gh-pages/brick_relationhsips.ttl).
 
 ### ***Generate new dataset:***
 High-level flow diagram could be found in the Methods section in the paper. 
