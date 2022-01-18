@@ -16,10 +16,28 @@ This is a synthetic building operation dataset which includes HVAC, lighting, mi
 
 
 ### ***Access the Dataset***
+
+#### *Option 1 - Direct Download*
 The dataset is registered with the U.S. Department of Energy's [Open Energy Data Initiative (OEDI)](https://data.openei.org/submissions/2977) and is stored with Amazon Simple Storage Service (S3). More details about the service can be found at this [site](https://registry.opendata.aws/oedi-data-lake/). To download the dataset, first make sure the [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) is installed. Then, make sure you have enough (>1.2TB) disk space, and run the command below to download the file to the <local_directory\>.
 ```
 aws s3 cp s3://oedi-data-lake/building_synthetic_dataset/A_Synthetic_Building_Operation_Dataset.h5 <local_directory> --no-sign-request
 ```
+
+#### *Option 2 - Access Subset from S3*
+Downloading the 1.2TB HDF5 file in one piece requires large disk space and can be time-consuming. Alternatively, you can access the data by subset directly from the AWS S3 bucket, which is enabled by the hierarchical structure of the HDF5 file. The code snippet for this purpose is:
+```
+# Import dependencies
+import s3fs
+import h5py
+
+# Access the file from S3 bucket
+dir_aws_s3 = 's3://oedi-data-lake/building_synthetic_dataset/A_Synthetic_Building_Operation_Dataset.h5'
+s3 = s3fs.S3FileSystem()
+hdf = h5py.File(s3.open(dir_aws_s3, "rb"))
+```
+The [Jupyter notebook](https://github.com/LBNL-ETA/AlphaBuilding-SyntheticDataset/blob/master/A%20Synthetic%20Operation%20Dataset.ipynb) provides a full example. 
+You might need to follow the [instruction](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) to configure AWS command line credentials to read from S3. 
+
 
 ### ***Data Extraction and Visualization:***
 
